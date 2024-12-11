@@ -13,19 +13,19 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Feste Höhe für den Header */
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    box-sizing: border-box; /* Stellt sicher, dass Padding zur Höhe zählt */
+    box-sizing: border-box; /* Stellt sicher, dass Padding berücksichtigt wird */
+    height: auto; /* Dynamische Höhe, basierend auf dem Inhalt */
 }
 
 /* Platzhalter für Header-Höhe */
 .header-spacer {
-    height: 70px; /* Gleiche Höhe wie der Header */
+    height: 100px; /* Standardhöhe, falls das Logo größer ist, wird dies angepasst */
 }
 
 /* Menü-Button */
@@ -49,8 +49,7 @@ header {
 .logo {
     max-width: 150px;
     height: auto;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
 }
 
 /* Container für den Hauptinhalt */
