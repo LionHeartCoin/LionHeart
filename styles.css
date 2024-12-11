@@ -5,25 +5,57 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    text-align: center;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto 0; /* Platz für das feste Header-Menü */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+/* Logo-Stil */
 .logo {
-    max-width: 350px; /* Maximale Breite des Logos */
+    max-width: 150px; /* Maximale Breite des Logos */
     height: auto; /* Proportionen beibehalten */
-    margin: 20px auto; /* Abstand nach oben und unten */
-    display: block; /* Zentriert darstellen */
+    display: inline-block;
+    vertical-align: middle;
 }
 
+/* Header-Menü */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #c0392b;
+}
+
+/* Inhalte der Seite */
 h1 {
     font-size: 2rem;
     color: #2c3e50;
