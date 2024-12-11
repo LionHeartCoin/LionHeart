@@ -3,27 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 60px; /* Abstand für den fixierten Header */
     background-color: #f5f5f5;
     color: #333;
-}
-
-/* Container für den Hauptinhalt */
-.container {
-    max-width: 800px;
-    margin: 100px auto 0; /* Platz für das feste Header-Menü */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Logo-Stil */
-.logo {
-    max-width: 150px; /* Maximale Breite des Logos */
-    height: auto; /* Proportionen beibehalten */
-    display: inline-block;
-    vertical-align: middle;
 }
 
 /* Header-Menü */
@@ -38,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    height: 60px; /* Feste Höhe für den Header */
 }
 
 /* Menü-Button */
@@ -55,6 +38,25 @@ header {
 
 .menu-button:hover {
     background-color: #c0392b;
+}
+
+/* Logo-Stil */
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Container für den Hauptinhalt */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Inhalte der Seite */
