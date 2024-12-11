@@ -18,7 +18,7 @@ body {
 }
 
 .logo {
-    max-width: 150px; /* Maximale Breite des Logos */
+    max-width: 350px; /* Maximale Breite des Logos */
     height: auto; /* Proportionen beibehalten */
     margin: 20px auto; /* Abstand nach oben und unten */
     display: block; /* Zentriert darstellen */
