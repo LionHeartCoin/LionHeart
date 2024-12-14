@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Website</title>
+    <title>LionHeart Token</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <!-- Menü-Button -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        
+        <!-- Logo -->
+        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        
+        <!-- Dropdown-Menü -->
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="project-description.html">Project Description</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <h1>Welcome to LionHeart Token</h1>
+        <p>The token with heart and purpose. Buy now and join the movement!</p>
+        <a href="https://quickswap.exchange/#/swap?outputCurrency=0x4BFDCc8D21B20710c88e8b09Ca72f45e581E8310" 
+           target="_blank" 
+           class="buy-button">
+            Buy LionHeart Token on Quickswap
+        </a>
+    </div>
+
+    <!-- Widget-Bereich -->
+    <div class="widget-container">
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/large?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
 
     <!-- Telegram-Button -->
     <div class="telegram-button">
@@ -15,36 +48,19 @@
         </a>
     </div>
 
-    <!-- Copy Contract Address Button -->
-    <div class="copy-address-button">
-        <button id="copyButton">Copy Contract Address</button>
-        <span id="copyMessage" class="copy-message">Address copied!</span>
-    </div>
-
     <!-- JavaScript -->
     <script>
-    document.getElementById('copyButton').addEventListener('click', function() {
-        // Contract-Adresse (ersetze mit der echten Adresse)
-        const contractAddress = '0xYourContractAddressHere';
-
-        // Erstelle ein unsichtbares Eingabefeld, um die Adresse zu kopieren
-        const textarea = document.createElement('textarea');
-        textarea.value = contractAddress;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        // Zeige die Bestätigungsmeldung
-        const message = document.getElementById('copyMessage');
-        message.style.display = 'inline'; // Zeige die Nachricht an
-
-        // Verstecke die Bestätigung nach 2 Sekunden
-        setTimeout(function() {
-            message.style.display = 'none';
-        }, 2000);
-    });
+        // Funktion zum Umschalten des Menüs
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('visible');
+            } else {
+                menu.classList.remove('visible');
+                menu.classList.add('hidden');
+            }
+        }
     </script>
-
 </body>
 </html>
