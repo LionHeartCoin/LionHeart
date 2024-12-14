@@ -9,9 +9,16 @@
 <body>
     <!-- Header mit Menü-Button und Logo -->
     <header>
-        <button class="menu-button">Menu</button>
-        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
-    </header>
+    <button class="menu-button" onclick="toggleMenu()">Menu</button>
+    <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+    <!-- Navigationsmenü -->
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="project-description.html">Project Description</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
 
     <!-- Hauptinhalt -->
     <div class="container">
@@ -81,7 +88,18 @@ document.getElementById('copyButton').addEventListener('click', function() {
     }, 2000);
 });
 </script>
-
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('visible');
+        } else {
+            menu.classList.remove('visible');
+            menu.classList.add('hidden');
+        }
+    }
+</script>
     
 </body>
 </html>
