@@ -30,19 +30,17 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
-    <!-- JavaScript zur dynamischen Berechnung der Header-Höhe -->
+    <!-- JavaScript zur dynamischen Anpassung -->
     <script>
-        // Funktion zur Anpassung des Inhalts-Abstands
+        // Funktion zur Anpassung des Inhaltsabstands
         function adjustBodyMargin() {
             const header = document.querySelector('header');
-            const headerHeight = header.offsetHeight; // Höhe des Headers
-            document.body.style.marginTop = `${headerHeight}px`; // Dynamische Anpassung
+            const headerHeight = header.offsetHeight;
+            document.body.style.marginTop = `${headerHeight}px`;
         }
 
-        // Initiale Anpassung beim Laden der Seite
+        // Initial und bei Fensteränderung anpassen
         window.addEventListener('load', adjustBodyMargin);
-
-        // Anpassung bei Fenstergrößeänderung
         window.addEventListener('resize', adjustBodyMargin);
     </script>
 </body>
