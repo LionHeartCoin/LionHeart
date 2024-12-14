@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header-Menü */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -23,9 +23,9 @@ header {
     height: auto; /* Dynamische Höhe für den Header */
 }
 
-/* Dynamischer Abstand für den Inhalt */
+/* Dynamischer Abstand */
 body {
-    padding-top: 280px; /* Platz für den fixierten Header */
+    margin-top: 80px; /* Vorläufiger Wert, dieser wird durch JavaScript überschrieben */
 }
 
 /* Menü-Button */
@@ -45,7 +45,7 @@ body {
     background-color: #c0392b;
 }
 
-/* Logo-Stil */
+/* Logo */
 .logo {
     max-width: 150px;
     height: auto;
