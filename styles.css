@@ -98,3 +98,31 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
     text-align: center;
 }
+
+/* Telegram-Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px; /* Abstand vom unteren Rand */
+    right: 20px; /* Abstand vom rechten Rand */
+    z-index: 1000; /* Überlagert andere Inhalte */
+    background-color: #0088cc; /* Telegram-Farbschema */
+    border-radius: 50px; /* Abgerundete Kanten */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+    padding: 10px 20px; /* Innenabstand */
+}
+
+.telegram-button:hover {
+    background-color: #006699; /* Dunklerer Farbton beim Hover */
+    cursor: pointer;
+    transform: scale(1.05); /* Leichte Vergrößerung */
+    transition: all 0.3s ease-in-out;
+}
+
+.telegram-link {
+    color: #ffffff; /* Weißer Text */
+    text-decoration: none; /* Kein Unterstrich */
+    font-size: 1rem; /* Lesbare Schriftgröße */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
