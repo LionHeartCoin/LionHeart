@@ -23,5 +23,20 @@
             Buy LionHeart Token on Quickswap
         </a>
     </div>
+    <script>
+    // Funktion zur Anpassung des Inhalts-Abstands
+    function adjustBodyMargin() {
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight; // Höhe des Headers
+        document.body.style.marginTop = `${headerHeight}px`; // Dynamische Anpassung
+    }
+
+    // Initiale Anpassung beim Laden der Seite
+    window.addEventListener('load', adjustBodyMargin);
+
+    // Anpassung bei Fenstergrößeänderung
+    window.addEventListener('resize', adjustBodyMargin);
+</script>
+
 </body>
 </html>
