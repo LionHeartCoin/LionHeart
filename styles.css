@@ -125,3 +125,34 @@ p {
     font-weight: bold;
     font-family: Arial, sans-serif;
 }
+
+/* Button-Stil */
+.copy-address-button {
+    position: fixed;
+    bottom: 80px; /* Etwas höher als der Telegram-Button */
+    right: 20px;
+    z-index: 1000;
+}
+
+#copyButton {
+    background-color: #4CAF50; /* Grüner Hintergrund */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+#copyButton:hover {
+    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+}
+
+.copy-message {
+    display: none; /* Versteckt die Nachricht anfangs */
+    font-size: 1rem;
+    color: #28a745; /* Grüner Text für Bestätigung */
+    margin-left: 10px;
+}
+
