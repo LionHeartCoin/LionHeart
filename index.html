@@ -29,21 +29,5 @@
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/large?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
-
-    <!-- JavaScript zur dynamischen Berechnung der Header-Höhe -->
-    <script>
-        // Funktion zur Anpassung des Inhalts-Abstands
-        function adjustBodyMargin() {
-            const header = document.querySelector('header');
-            const headerHeight = header.offsetHeight; // Höhe des Headers
-            document.body.style.marginTop = `${headerHeight}px`; // Dynamische Anpassung
-        }
-
-        // Initiale Anpassung beim Laden der Seite
-        window.addEventListener('load', adjustBodyMargin);
-
-        // Anpassung bei Fenstergrößeänderung
-        window.addEventListener('resize', adjustBodyMargin);
-    </script>
 </body>
 </html>
