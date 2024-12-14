@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    /* Kein padding-top mehr nötig – JavaScript passt den Abstand an */
+    /* Dynamischer Abstand wird durch JavaScript geregelt */
 }
 
 /* Header */
@@ -19,9 +19,9 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
-    height: auto;
 }
 
 /* Menü-Button */
@@ -51,7 +51,7 @@ header {
 /* Container für den Hauptinhalt */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -91,10 +91,10 @@ p {
 /* Widget-Container */
 .widget-container {
     max-width: 800px; /* Gleiche Breite wie der Hauptinhalt */
-    margin: 20px auto; /* Zentriert das Widget und fügt Abstand ein */
+    margin: 40px auto; /* Abstand oben und unten */
     padding: 20px; /* Zusätzlicher Innenabstand */
-    background-color: #ffffff; /* Weißer Hintergrund, passend zum Design */
+    background-color: #ffffff; /* Weißer Hintergrund */
     border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für mehr Tiefe */
-    text-align: center; /* Zentrierter Inhalt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    text-align: center;
 }
