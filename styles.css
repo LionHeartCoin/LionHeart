@@ -25,7 +25,7 @@ header {
 
 /* Dynamischer Abstand für den Inhalt */
 body {
-    padding-top: 180px; /* Platz für den fixierten Header */
+    padding-top: 280px; /* Platz für den fixierten Header */
 }
 
 /* Menü-Button */
