@@ -1,145 +1,66 @@
-/* Allgemeine Stile */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LionHeart Token</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Menü-Button -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        
+        <!-- Logo -->
+        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        
+        <!-- Dropdown-Menü -->
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="project-description.html">Project Description</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.container {
-    padding: 80px 20px; /* Abstand vom Header */
-    text-align: center;
-}
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <h1>Welcome to LionHeart Token</h1>
+        <p>The token with heart and purpose. Buy now and join the movement!</p>
+        <a href="https://quickswap.exchange/#/swap?outputCurrency=0x4BFDCc8D21B20710c88e8b09Ca72f45e581E8310" 
+           target="_blank" 
+           class="buy-button">
+            Buy LionHeart Token on Quickswap
+        </a>
+    </div>
 
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
-}
+    <!-- Widget-Bereich -->
+    <div class="widget-container">
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/large?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
 
-/* Menü-Button */
-.menu-button {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    <!-- Telegram-Button -->
+    <div class="telegram-button">
+        <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
+            Join us on Telegram
+        </a>
+    </div>
 
-.menu-button:hover {
-    background-color: #c0392b;
-}
-
-/* Logo */
-.logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Zentriert das Logo */
-}
-
-/* Navigationsmenü */
-nav {
-    position: absolute;
-    top: 60px; /* Unterhalb des Headers */
-    right: 20px; /* Am rechten Rand ausgerichtet */
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    display: none; /* Standardmäßig ausgeblendet */
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #e74c3c;
-}
-
-/* Menü-Sichtbarkeit */
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
-/* Buy-Button */
-.buy-button {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #2980b9;
-}
-
-/* Widget */
-.widget-container {
-    margin-top: 40px;
-    text-align: center;
-}
-
-/* Telegram-Button */
-.telegram-button {
-    position: fixed;
-    bottom: 20px; /* Abstand vom unteren Rand */
-    right: 20px; /* Abstand vom rechten Rand */
-    z-index: 1000; /* Überlagert andere Inhalte */
-    background-color: #0088cc; /* Telegram-Farbschema */
-    border-radius: 50px; /* Abgerundete Kanten */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
-    padding: 10px 20px; /* Innenabstand */
-}
-
-.telegram-button:hover {
-    background-color: #006699; /* Dunklerer Farbton beim Hover */
-    cursor: pointer;
-    transform: scale(1.05); /* Leichte Vergrößerung */
-    transition: all 0.3s ease-in-out;
-}
-
-.telegram-link {
-    color: #ffffff; /* Weißer Text */
-    text-decoration: none; /* Kein Unterstrich */
-    font-size: 1rem; /* Lesbare Schriftgröße */
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-}
+    <!-- JavaScript -->
+    <script>
+        // Funktion zum Umschalten des Menüs
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('visible');
+            } else {
+                menu.classList.remove('visible');
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
