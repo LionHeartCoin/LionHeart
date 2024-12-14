@@ -50,15 +50,18 @@
         Telegram Group
     </a>
 </div>
-    
+
 <!-- Copy Contract Address Button -->
 <div class="copy-address-button">
     <button id="copyButton">Copy Contract Address</button>
     <span id="copyMessage" class="copy-message">Address copied!</span>
 </div>
+
+<!-- JavaScript -->
+<script>
 document.getElementById('copyButton').addEventListener('click', function() {
     // Contract-Adresse (ersetze mit der echten Adresse)
-    const contractAddress = 'Dangeeeeee';
+    const contractAddress = '0xYourContractAddressHere';
 
     // Erstelle ein unsichtbares Eingabefeld, um die Adresse zu kopieren
     const textarea = document.createElement('textarea');
@@ -77,6 +80,7 @@ document.getElementById('copyButton').addEventListener('click', function() {
         message.style.display = 'none';
     }, 2000);
 });
+</script>
 
     
 </body>
