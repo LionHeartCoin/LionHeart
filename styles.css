@@ -20,7 +20,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     box-sizing: border-box;
-    height: auto; /* Dynamische Höhe für den Header */
+    height: auto;
 }
 
 /* Dynamischer Abstand */
@@ -90,4 +90,15 @@ p {
 
 .buy-button:hover {
     background-color: #c0392b;
+}
+
+/* Widget-Container */
+.widget-container {
+    max-width: 800px; /* Gleiche Breite wie der Hauptinhalt */
+    margin: 20px auto; /* Zentriert das Widget und fügt Abstand ein */
+    padding: 20px; /* Zusätzlicher Innenabstand */
+    background-color: #ffffff; /* Weißer Hintergrund, passend zum Design */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für mehr Tiefe */
+    text-align: center; /* Zentrierter Inhalt */
 }
