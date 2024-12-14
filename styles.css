@@ -19,13 +19,13 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    box-sizing: border-box; /* Stellt sicher, dass Padding berücksichtigt wird */
-    height: auto; /* Dynamische Höhe, basierend auf Inhalt (Logo + Button) */
+    box-sizing: border-box;
+    height: auto; /* Dynamische Höhe für den Header */
 }
 
 /* Dynamischer Abstand für den Inhalt */
-.header-spacer {
-    height: auto; /* Höhe passt sich dynamisch an */
+body {
+    padding-top: 80px; /* Platz für den fixierten Header */
 }
 
 /* Menü-Button */
@@ -50,11 +50,6 @@ header {
     max-width: 150px;
     height: auto;
     display: block;
-}
-
-/* Dynamische Berechnung der Platzhalter-Höhe */
-.header-spacer {
-    height: 100px; /* Standardhöhe des Headers */
 }
 
 /* Container für den Hauptinhalt */
