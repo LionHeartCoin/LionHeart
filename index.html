@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header mit Menü-Button und Logo -->
+    <!-- Header -->
     <header>
-    <button class="menu-button" onclick="toggleMenu()">Menu</button>
-    <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
-    <!-- Navigationsmenü -->
-    <nav id="menu" class="hidden">
-        <ul>
-            <li><a href="project-description.html">Project Description</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Menü-Button -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        
+        <!-- Logo -->
+        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        
+        <!-- Dropdown-Menü -->
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="project-description.html">Project Description</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hauptinhalt -->
     <div class="container">
@@ -37,69 +41,26 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
-    <!-- JavaScript zur dynamischen Anpassung -->
-    <script>
-        // Funktion zur Anpassung des Inhaltsabstands
-        function adjustBodyMargin() {
-            const header = document.querySelector('header');
-            const headerHeight = header.offsetHeight;
-            document.body.style.marginTop = `${headerHeight}px`;
-        }
-
-        // Initial und bei Fensteränderung anpassen
-        window.addEventListener('load', adjustBodyMargin);
-        window.addEventListener('resize', adjustBodyMargin);
-    </script>
-    
     <!-- Telegram-Button -->
-<div class="telegram-button">
-    <a href="https://t.me/LionHeartCoin" target="_blank" class="telegram-link">
-        Telegram Group
-    </a>
-</div>
+    <div class="telegram-button">
+        <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
+            Join us on Telegram
+        </a>
+    </div>
 
-<!-- Copy Contract Address Button -->
-<div class="copy-address-button">
-    <button id="copyButton">Copy Contract Address</button>
-    <span id="copyMessage" class="copy-message">Address copied!</span>
-</div>
-
-<!-- JavaScript -->
-<script>
-document.getElementById('copyButton').addEventListener('click', function() {
-    // Contract-Adresse (ersetze mit der echten Adresse)
-    const contractAddress = 'Dangeee';
-
-    // Erstelle ein unsichtbares Eingabefeld, um die Adresse zu kopieren
-    const textarea = document.createElement('textarea');
-    textarea.value = contractAddress;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-
-    // Zeige die Bestätigungsmeldung
-    const message = document.getElementById('copyMessage');
-    message.style.display = 'inline'; // Zeige die Nachricht an
-
-    // Verstecke die Bestätigung nach 2 Sekunden
-    setTimeout(function() {
-        message.style.display = 'none';
-    }, 2000);
-});
-</script>
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            menu.classList.add('visible');
-        } else {
-            menu.classList.remove('visible');
-            menu.classList.add('hidden');
+    <!-- JavaScript -->
+    <script>
+        // Funktion zum Umschalten des Menüs
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('visible');
+            } else {
+                menu.classList.remove('visible');
+                menu.classList.add('hidden');
+            }
         }
-    }
-</script>
-    
+    </script>
 </body>
 </html>
