@@ -155,4 +155,47 @@ p {
     color: #28a745; /* Grüner Text für Bestätigung */
     margin-left: 10px;
 }
+/* Menü-Stile */
+nav {
+    position: absolute;
+    top: 60px; /* Unterhalb des Headers */
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Standardmäßig ausgeblendet */
+    z-index: 1000;
+}
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Klasse zum Ein-/Ausblenden des Menüs */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
