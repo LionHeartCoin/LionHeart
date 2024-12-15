@@ -43,6 +43,12 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
+    <!-- Copy Contract Address Button -->
+    <div class="copy-container">
+        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
+        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
+    </div>
+
     <!-- Telegram-Button -->
     <div class="telegram-button">
         <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
@@ -55,14 +61,10 @@
         // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Menü schließen, wenn außerhalb geklickt wird
+        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
@@ -70,6 +72,18 @@
                 menu.style.display = 'none';
             }
         });
+
+        // Funktion zum Kopieren der Contract-Adresse
+        function copyContractAddress() {
+            const contractAddress = "0xYourContractAddressHere"; // Deine Contract-Adresse hier eintragen
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                const feedback = document.getElementById("copy-feedback");
+                feedback.style.display = "block";
+                setTimeout(() => feedback.style.display = "none", 2000);
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
     </script>
 </body>
 </html>
