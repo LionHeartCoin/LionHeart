@@ -21,16 +21,17 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
-/* Menü-Button */
 .menu-container {
-    position: relative; /* Positioniert das Dropdown relativ zum Button */
+    position: relative; /* Referenz für das Dropdown-Menü */
+    margin-right: auto; /* Links ausrichten */
 }
 
+/* Menü-Button */
 .menu-button {
     background-color: #e74c3c;
     color: #fff;
@@ -50,15 +51,15 @@ header {
 .dropdown-menu {
     position: absolute;
     top: 100%; /* Direkt unter dem Menü-Button */
-    left: 0; /* Links am Button ausgerichtet */
+    left: 0; /* Links ausgerichtet */
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: none; /* Standardmäßig ausgeblendet */
-    z-index: 1000;
-    min-width: 150px; /* Breite des Dropdown-Menüs */
+    z-index: 2000; /* Über anderen Inhalten */
+    min-width: 150px;
 }
 
 .dropdown-menu ul {
@@ -75,4 +76,66 @@ header {
     text-decoration: none;
     color: #2c3e50;
     font-size: 1rem;
-    font-weight
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Buy-Button */
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+/* Widget */
+.widget-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Telegram-Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #0088cc;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.telegram-button:hover {
+    background-color: #006699;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.telegram-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
