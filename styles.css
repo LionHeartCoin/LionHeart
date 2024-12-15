@@ -22,9 +22,9 @@ header {
     height: 70px; /* Höhe des Headers */
 }
 
-/* Hauptinhalt abheben */
+/* Hauptinhalt mit Abhebung */
 .container {
-    padding: 100px 20px 20px; /* Abstand zum Header */
+    padding: 40px 20px 20px; /* Innenabstand */
     text-align: center;
     background-color: #ffffff; /* Weißer Hintergrund */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
@@ -33,7 +33,7 @@ header {
     max-width: 800px; /* Maximale Breite für den Inhalt */
 }
 
-/* Widget-Bereich */
+/* Widget-Bereich mit Abhebung */
 .widget-container {
     margin-top: 40px;
     padding: 20px; /* Innenabstand */
@@ -45,12 +45,7 @@ header {
     margin: 20px auto; /* Zentrierung */
 }
 
-/* Widget-Inhalt zentralisieren */
-.widget-container .gfm-embed {
-    display: inline-block; /* Inline, um es nicht zu groß wirken zu lassen */
-}
-
-/* Schatten auf Hover für Widget */
+/* Widget Hover-Effekt */
 .widget-container:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
     transform: translateY(-2px); /* Leichte Hebung */
