@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
-    height: 150px; /* Höhe des Headers */
+    height: 120px; /* Höhe des Headers */
 }
 
 /* Hauptinhalt mit Abhebung */
@@ -112,7 +112,7 @@ header {
 
 /* Logo */
 .logo {
-    max-width: auto;
+    max-width: 120px;
     height: auto;
 }
 
