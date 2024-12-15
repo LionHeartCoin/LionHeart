@@ -101,8 +101,8 @@ header {
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    bottom: 80px; /* Über Telegram-Button */
+    right: 20px; /* Rechts ausgerichtet */
     text-align: center;
 }
 
@@ -110,15 +110,17 @@ header {
     background-color: #3498db;
     color: #ffffff;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .copy-button:hover {
     background-color: #2980b9;
+    transform: scale(1.05); /* Leichter Vergrößerungseffekt */
 }
 
 .copy-feedback {
