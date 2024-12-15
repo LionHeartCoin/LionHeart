@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Description - LionHeart Token</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-container">
+            <!-- Menü-Button -->
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            
+            <!-- Dropdown-Menü -->
+            <nav id="dropdown-menu" class="dropdown-menu hidden">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Logo -->
+        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+    </header>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <h1>About LionHeart Token</h1>
+        <p class="intro-text">LionHeart Token is the cryptocurrency with a heart. Built on trust, innovation, and purpose, it empowers communities and drives positive change.</p>
+
+        <!-- Sektion 1 -->
+        <section class="description-section">
+            <h2>Our Vision</h2>
+            <p>At LionHeart Token, our vision is to create a decentralized platform that empowers individuals while contributing to global initiatives. We believe in transparency, sustainability, and building a better future for all.</p>
+        </section>
+
+        <!-- Sektion 2 -->
+        <section class="description-section">
+            <h2>Tokenomics</h2>
+            <ul>
+                <li><strong>Total Supply:</strong> 1,000,000,000 LHT</li>
+                <li><strong>Burn Mechanism:</strong> 10% of every transaction is burned to increase scarcity.</li>
+                <li><strong>Charity Pool:</strong> 5% of every transaction goes directly to global causes.</li>
+            </ul>
+        </section>
+
+        <!-- Sektion 3 -->
+        <section class="description-section">
+            <h2>How to Get Started</h2>
+            <ol>
+                <li>Download a compatible wallet (e.g., MetaMask).</li>
+                <li>Add LionHeart Token to your wallet using our contract address.</li>
+                <li>Swap your desired cryptocurrency for LHT on our partner platforms.</li>
+            </ol>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LionHeart Token. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Funktion für das Dropdown-Menü
+        function toggleMenu() {
+            const menu = document.getElementById('dropdown-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('visible');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdown-menu');
+            const button = document.querySelector('.menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+                menu.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
