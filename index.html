@@ -12,7 +12,6 @@
         <!-- Menü-Container -->
         <div class="menu-container">
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
-            
             <!-- Dropdown-Menü -->
             <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
@@ -43,6 +42,12 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
+    <!-- Copy Contract Address Button -->
+    <div class="copy-container">
+        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
+        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
+    </div>
+
     <!-- Telegram-Button -->
     <div class="telegram-button">
         <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
@@ -70,6 +75,26 @@
                 menu.style.display = 'none';
             }
         });
+
+        // Funktion zum Kopieren der Contract-Adresse
+        function copyContractAddress() {
+            // Die Contract Adresse hier eintragen
+            const contractAddress = "0xYourContractAddressHere";
+
+            // Adresse in die Zwischenablage kopieren
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                // Feedback anzeigen
+                const feedback = document.getElementById("copy-feedback");
+                feedback.style.display = "block";
+
+                // Feedback nach 2 Sekunden wieder ausblenden
+                setTimeout(() => {
+                    feedback.style.display = "none";
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
     </script>
 </body>
 </html>
