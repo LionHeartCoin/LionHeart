@@ -9,8 +9,8 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Container -->
         <div class="menu-container">
+            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
             <!-- Dropdown-Menü -->
             <nav id="dropdown-menu" class="dropdown-menu">
@@ -57,17 +57,13 @@
 
     <!-- JavaScript -->
     <script>
-        // Funktion zum Umschalten des Dropdown-Menüs
+        // Dropdown-Menü umschalten
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Menü schließen, wenn außerhalb geklickt wird
+        // Dropdown schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
@@ -76,23 +72,13 @@
             }
         });
 
-        // Funktion zum Kopieren der Contract-Adresse
+        // Contract Adresse kopieren
         function copyContractAddress() {
-            // Die Contract Adresse hier eintragen
             const contractAddress = "0xYourContractAddressHere";
-
-            // Adresse in die Zwischenablage kopieren
             navigator.clipboard.writeText(contractAddress).then(() => {
-                // Feedback anzeigen
                 const feedback = document.getElementById("copy-feedback");
                 feedback.style.display = "block";
-
-                // Feedback nach 2 Sekunden wieder ausblenden
-                setTimeout(() => {
-                    feedback.style.display = "none";
-                }, 2000);
-            }).catch(err => {
-                console.error("Failed to copy: ", err);
+                setTimeout(() => feedback.style.display = "none", 2000);
             });
         }
     </script>
