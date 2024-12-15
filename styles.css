@@ -22,10 +22,39 @@ header {
     height: 70px; /* Höhe des Headers */
 }
 
-/* Hauptinhalt */
+/* Hauptinhalt abheben */
 .container {
-    padding: 100px 20px 20px; /* Dynamischer Abstand zum Header */
+    padding: 100px 20px 20px; /* Abstand zum Header */
     text-align: center;
+    background-color: #ffffff; /* Weißer Hintergrund */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    margin: 20px auto; /* Zentrierung */
+    max-width: 800px; /* Maximale Breite für den Inhalt */
+}
+
+/* Widget-Bereich */
+.widget-container {
+    margin-top: 40px;
+    padding: 20px; /* Innenabstand */
+    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    text-align: center;
+    max-width: 800px; /* Maximale Breite */
+    margin: 20px auto; /* Zentrierung */
+}
+
+/* Widget-Inhalt zentralisieren */
+.widget-container .gfm-embed {
+    display: inline-block; /* Inline, um es nicht zu groß wirken zu lassen */
+}
+
+/* Schatten auf Hover für Widget */
+.widget-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
+    transform: translateY(-2px); /* Leichte Hebung */
+    transition: all 0.3s ease-in-out; /* Übergangsanimation */
 }
 
 /* Menü-Button */
@@ -104,7 +133,7 @@ header {
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px;
+    bottom: 80px; /* Über Telegram-Button */
     right: 20px; /* Rechts ausgerichtet */
     text-align: center;
 }
