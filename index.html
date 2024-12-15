@@ -9,11 +9,11 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Button mit Container -->
         <div class="menu-container">
+            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
             <!-- Dropdown-Menü -->
-            <nav id="menu" class="dropdown-menu hidden">
+            <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -51,25 +51,22 @@
 
     <!-- JavaScript -->
     <script>
-        // Funktion zum Umschalten des Menüs
+        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('visible');
+            const menu = document.getElementById('dropdown-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
             } else {
-                menu.classList.remove('visible');
-                menu.classList.add('hidden');
+                menu.style.display = 'block';
             }
         }
 
-        // Menü schließen, wenn irgendwo anders geklickt wird
-        document.addEventListener('click', function (event) {
-            const menu = document.getElementById('menu');
-            const menuButton = document.querySelector('.menu-button');
-            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
-                menu.classList.remove('visible');
-                menu.classList.add('hidden');
+        // Menü schließen, wenn außerhalb geklickt wird
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdown-menu');
+            const button = document.querySelector('.menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = 'none';
             }
         });
     </script>
