@@ -26,11 +26,11 @@ header {
     box-sizing: border-box;
 }
 
+/* Menü-Button und Container */
 .menu-container {
-    position: relative;
+    position: relative; /* Stellt sicher, dass Dropdown hier positioniert wird */
 }
 
-/* Menü-Button */
 .menu-button {
     background-color: #e74c3c;
     color: #fff;
@@ -49,15 +49,16 @@ header {
 /* Dropdown-Menü */
 .dropdown-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; /* Direkt unter dem Button */
+    left: 0; /* Links vom Button ausrichten */
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    display: none;
-    z-index: 2000;
+    display: none; /* Standardmäßig ausgeblendet */
+    z-index: 2000; /* Über anderen Inhalten */
+    min-width: 200px;
 }
 
 .dropdown-menu ul {
@@ -73,27 +74,19 @@ header {
 .dropdown-menu ul li a {
     text-decoration: none;
     color: #2c3e50;
+    font-size: 1rem;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .dropdown-menu ul li a:hover {
     color: #e74c3c;
 }
 
-/* Menü-Sichtbarkeit */
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
 /* Logo */
 .logo {
-    max-height: 60px; /* Logo fixieren */
-    width: auto;
-    margin: 0 auto;
+    max-width: 150px;
+    height: auto;
 }
 
 /* Buy-Button */
@@ -123,11 +116,18 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 1000;
     background-color: #0088cc;
     border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+}
+
+.telegram-button:hover {
+    background-color: #006699;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
 
 .telegram-link {
@@ -135,4 +135,5 @@ header {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
+    font-family: Arial, sans-serif;
 }
