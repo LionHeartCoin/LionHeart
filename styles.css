@@ -231,3 +231,27 @@ header {
     margin-bottom: 20px;
     text-align: center; /* Zentrierte Einführung */
 }
+/* Back to Home Button */
+.back-button-container {
+    text-align: center;
+    margin: 20px auto; /* Abstand um den Button */
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #3498db; /* Blaue Farbe */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+.back-button:hover {
+    background-color: #2980b9; /* Dunkleres Blau */
+    transform: scale(1.05); /* Leichte Vergrößerung */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stärkerer Schatten */
+}
