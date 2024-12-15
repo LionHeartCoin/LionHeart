@@ -46,14 +46,6 @@ header {
     background-color: #c0392b;
 }
 
-/* Logo */
-.logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Zentriert das Logo */
-}
-
 /* Dropdown-Menü */
 .dropdown-menu {
     position: absolute;
@@ -83,68 +75,4 @@ header {
     text-decoration: none;
     color: #2c3e50;
     font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.dropdown-menu ul li a:hover {
-    color: #e74c3c;
-}
-
-/* Menü-Sichtbarkeit */
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
-/* Buy-Button */
-.buy-button {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #2980b9;
-}
-
-/* Widget */
-.widget-container {
-    margin-top: 40px;
-    text-align: center;
-}
-
-/* Telegram-Button */
-.telegram-button {
-    position: fixed;
-    bottom: 20px; /* Abstand vom unteren Rand */
-    right: 20px; /* Abstand vom rechten Rand */
-    z-index: 1000; /* Überlagert andere Inhalte */
-    background-color: #0088cc; /* Telegram-Farbschema */
-    border-radius: 50px; /* Abgerundete Kanten */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
-    padding: 10px 20px; /* Innenabstand */
-}
-
-.telegram-button:hover {
-    background-color: #006699; /* Dunklerer Farbton beim Hover */
-    cursor: pointer;
-    transform: scale(1.05); /* Leichte Vergrößerung */
-    transition: all 0.3s ease-in-out;
-}
-
-.telegram-link {
-    color: #ffffff; /* Weißer Text */
-    text-decoration: none; /* Kein Unterstrich */
-    font-size: 1rem; /* Lesbare Schriftgröße */
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-}
+    font-weight
