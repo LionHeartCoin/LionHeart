@@ -21,17 +21,16 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
 }
 
+/* Menü-Button und Container */
 .menu-container {
-    position: relative; /* Referenz für das Dropdown-Menü */
-    margin-right: auto; /* Links ausrichten */
+    position: relative; /* Stellt sicher, dass Dropdown hier positioniert wird */
 }
 
-/* Menü-Button */
 .menu-button {
     background-color: #e74c3c;
     color: #fff;
@@ -50,8 +49,8 @@ header {
 /* Dropdown-Menü */
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* Direkt unter dem Menü-Button */
-    left: 0; /* Links ausgerichtet */
+    top: 100%; /* Direkt unter dem Button */
+    left: 0; /* Links vom Button ausrichten */
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -59,7 +58,7 @@ header {
     padding: 10px;
     display: none; /* Standardmäßig ausgeblendet */
     z-index: 2000; /* Über anderen Inhalten */
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .dropdown-menu ul {
@@ -88,7 +87,6 @@ header {
 .logo {
     max-width: 150px;
     height: auto;
-    display: block;
 }
 
 /* Buy-Button */
