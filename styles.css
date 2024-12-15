@@ -43,6 +43,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
     border-radius: 8px; /* Abgerundete Ecken */
     text-align: center; /* Zentrierter Inhalt */
+    height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
 }
 
 /* Widget Hover-Effekt */
