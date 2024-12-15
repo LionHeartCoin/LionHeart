@@ -9,11 +9,12 @@
 <body>
     <!-- Header -->
     <header>
+        <!-- Menü-Container -->
         <div class="menu-container">
-            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            
             <!-- Dropdown-Menü -->
-            <nav id="dropdown-menu" class="dropdown-menu hidden">
+            <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -54,17 +55,19 @@
         // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('visible');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
         }
 
-        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
+        // Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
             if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.classList.add('hidden');
-                menu.classList.remove('visible');
+                menu.style.display = 'none';
             }
         });
     </script>
