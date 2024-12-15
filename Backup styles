@@ -1,0 +1,152 @@
+/* Allgemeine Stile */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #c0392b;
+}
+
+/* Dropdown-Menü */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 2000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Buy-Button */
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+/* Copy Contract Button */
+.copy-container {
+    position: fixed;
+    bottom: 80px; /* Über Telegram-Button */
+    right: 20px; /* Rechts ausgerichtet */
+    text-align: center;
+}
+
+.copy-button {
+    background-color: #27ae60; /* Grün */
+    color: #ffffff; /* Weiß */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copy-button:hover {
+    background-color: #229954; /* Dunkleres Grün */
+    transform: scale(1.05); /* Leichter Vergrößerungseffekt */
+}
+
+.copy-feedback {
+    display: none;
+    color: #27ae60;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Telegram-Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0088cc;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.telegram-button:hover {
+    background-color: #006699;
+}
+
+.telegram-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
