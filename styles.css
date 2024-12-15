@@ -26,9 +26,8 @@ header {
     box-sizing: border-box;
 }
 
-/* Menü-Button und Container */
 .menu-container {
-    position: relative; /* Stellt sicher, dass Dropdown hier positioniert wird */
+    position: relative;
 }
 
 .menu-button {
@@ -49,16 +48,15 @@ header {
 /* Dropdown-Menü */
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* Direkt unter dem Button */
-    left: 0; /* Links vom Button ausrichten */
+    top: 100%;
+    left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    display: none; /* Standardmäßig ausgeblendet */
-    z-index: 2000; /* Über anderen Inhalten */
-    min-width: 200px;
+    display: none;
+    z-index: 2000;
 }
 
 .dropdown-menu ul {
@@ -67,14 +65,9 @@ header {
     padding: 0;
 }
 
-.dropdown-menu ul li {
-    margin: 10px 0;
-}
-
 .dropdown-menu ul li a {
     text-decoration: none;
     color: #2c3e50;
-    font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -83,32 +76,35 @@ header {
     color: #e74c3c;
 }
 
-/* Logo */
-.logo {
-    max-width: 150px;
-    height: auto;
+/* Copy Contract Button Container */
+.copy-container {
+    position: fixed;
+    bottom: 80px; /* Abstand vom Telegram-Button */
+    right: 20px; /* Rechts ausgerichtet */
+    text-align: center;
 }
 
-/* Buy-Button */
-.buy-button {
-    display: inline-block;
-    margin-top: 20px;
+.copy-button {
     background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
     border-radius: 4px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.buy-button:hover {
+.copy-button:hover {
     background-color: #2980b9;
 }
 
-/* Widget */
-.widget-container {
-    margin-top: 40px;
-    text-align: center;
+.copy-feedback {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #27ae60;
+    font-weight: bold;
 }
 
 /* Telegram-Button */
@@ -125,7 +121,6 @@ header {
 
 .telegram-button:hover {
     background-color: #006699;
-    cursor: pointer;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
@@ -135,5 +130,4 @@ header {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    font-family: Arial, sans-serif;
 }
