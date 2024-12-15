@@ -9,19 +9,19 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Button -->
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <!-- Menü-Button und Dropdown -->
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav id="menu" class="dropdown-menu hidden">
+                <ul>
+                    <li><a href="project-description.html">Project Description</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <!-- Logo -->
         <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
-        
-        <!-- Dropdown-Menü -->
-        <nav id="menu" class="hidden">
-            <ul>
-                <li><a href="project-description.html">Project Description</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hauptinhalt -->
@@ -53,14 +53,22 @@
         // Funktion zum Umschalten des Menüs
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('visible');
-            } else {
-                menu.classList.remove('visible');
-                menu.classList.add('hidden');
-            }
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('visible');
         }
+
+        // Klick außerhalb des Menüs schließt es
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+
+            if (!menu.contains(event.target) && event.target !== button) {
+                if (menu.classList.contains('visible')) {
+                    menu.classList.remove('visible');
+                    menu.classList.add('hidden');
+                }
+            }
+        });
     </script>
 </body>
 </html>
