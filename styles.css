@@ -120,7 +120,7 @@ header {
 .buy-button {
     display: inline-block;
     margin-top: 20px;
-    background-color: #3498db;
+    background-color: #d4af37;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -129,7 +129,7 @@ header {
 }
 
 .buy-button:hover {
-    background-color: #2980b9;
+    background-color: #b58e2f;
 }
 
 /* Copy Contract Button */
