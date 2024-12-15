@@ -9,8 +9,8 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Container -->
         <div class="menu-container">
+            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
             
             <!-- Dropdown-Menü -->
@@ -71,6 +71,14 @@
             if (!menu.contains(event.target) && !button.contains(event.target)) {
                 menu.style.display = 'none';
             }
+        });
+
+        // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            const container = document.querySelector('.container');
+            const headerHeight = header.offsetHeight; // Höhe des Headers
+            container.style.paddingTop = `${headerHeight + 20}px`; // Dynamischer Abstand
         });
 
         // Funktion zum Kopieren der Contract-Adresse
