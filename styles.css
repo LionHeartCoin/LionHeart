@@ -27,6 +27,10 @@ header {
 }
 
 /* Menü-Button */
+.menu-container {
+    position: relative; /* Positioniert das Dropdown relativ zum Button */
+}
+
 .menu-button {
     background-color: #e74c3c;
     color: #fff;
@@ -50,11 +54,11 @@ header {
     margin: 0 auto; /* Zentriert das Logo */
 }
 
-/* Navigationsmenü */
-nav {
+/* Dropdown-Menü */
+.dropdown-menu {
     position: absolute;
-    top: 60px; /* Unterhalb des Headers */
-    right: 20px; /* Am rechten Rand ausgerichtet */
+    top: 100%; /* Direkt unter dem Menü-Button */
+    left: 0; /* Links am Button ausgerichtet */
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -62,19 +66,20 @@ nav {
     padding: 10px;
     display: none; /* Standardmäßig ausgeblendet */
     z-index: 1000;
+    min-width: 150px; /* Breite des Dropdown-Menüs */
 }
 
-nav ul {
+.dropdown-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.dropdown-menu ul li {
     margin: 10px 0;
 }
 
-nav ul li a {
+.dropdown-menu ul li a {
     text-decoration: none;
     color: #2c3e50;
     font-size: 1rem;
@@ -82,7 +87,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.dropdown-menu ul li a:hover {
     color: #e74c3c;
 }
 
