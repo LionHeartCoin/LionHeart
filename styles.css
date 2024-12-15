@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
-    height: 70px; /* Höhe des Headers */
+    height: 150px; /* Höhe des Headers */
 }
 
 /* Hauptinhalt mit Abhebung */
@@ -35,16 +35,14 @@ header {
 
 /* Widget-Bereich */
 .widget-container {
-    display: inline-block; /* Passt die Box an die Größe des Inhalts an */
-    margin-top: 40px; /* Abstand nach oben */
-    padding: 10px 15px; /* Innenabstand, um Platz um das Widget zu schaffen */
+    display: block; /* Blockdarstellung */
+    width: 350px; /* Feste Breite passend zum Widget */
+    margin: 20px auto; /* Zentrierung */
+    padding: 10px; /* Innenabstand */
     background-color: #f9f9f9; /* Leicht grauer Hintergrund */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
     border-radius: 8px; /* Abgerundete Ecken */
-    text-align: center;
-    max-width: 100%; /* Verhindert, dass der Container zu breit wird */
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center; /* Zentrierter Inhalt */
 }
 
 /* Widget Hover-Effekt */
