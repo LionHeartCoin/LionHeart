@@ -13,7 +13,7 @@
             <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
             <!-- Dropdown-Menü -->
-            <nav id="dropdown-menu" class="dropdown-menu">
+            <nav id="dropdown-menu" class="dropdown-menu hidden">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -42,12 +42,6 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
-    <!-- Copy Contract Address Button -->
-    <div class="copy-container">
-        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
-        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
-    </div>
-
     <!-- Telegram-Button -->
     <div class="telegram-button">
         <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
@@ -57,30 +51,22 @@
 
     <!-- JavaScript -->
     <script>
-        // Dropdown-Menü umschalten
+        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('visible');
         }
 
-        // Dropdown schließen, wenn außerhalb geklickt wird
+        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
             if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.style.display = 'none';
+                menu.classList.add('hidden');
+                menu.classList.remove('visible');
             }
         });
-
-        // Contract Adresse kopieren
-        function copyContractAddress() {
-            const contractAddress = "0xYourContractAddressHere";
-            navigator.clipboard.writeText(contractAddress).then(() => {
-                const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block";
-                setTimeout(() => feedback.style.display = "none", 2000);
-            });
-        }
     </script>
 </body>
 </html>
