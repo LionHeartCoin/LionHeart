@@ -5,11 +5,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    padding: 80px 20px;
-    text-align: center;
-}
-
 /* Header */
 header {
     position: fixed;
@@ -24,8 +19,16 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
+    height: 70px; /* Höhe des Headers */
 }
 
+/* Hauptinhalt */
+.container {
+    padding: 100px 20px 20px; /* Dynamischer Abstand zum Header */
+    text-align: center;
+}
+
+/* Menü-Button */
 .menu-container {
     position: relative;
 }
@@ -101,14 +104,14 @@ header {
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px; /* Über Telegram-Button */
+    bottom: 80px;
     right: 20px; /* Rechts ausgerichtet */
     text-align: center;
 }
 
 .copy-button {
     background-color: #27ae60; /* Grün */
-    color: #ffffff; /* Weiß */
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
