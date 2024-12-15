@@ -107,8 +107,8 @@ header {
 }
 
 .copy-button {
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #27ae60; /* Grün */
+    color: #ffffff; /* Weiß */
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -119,7 +119,7 @@ header {
 }
 
 .copy-button:hover {
-    background-color: #2980b9;
+    background-color: #229954; /* Dunkleres Grün */
     transform: scale(1.05); /* Leichter Vergrößerungseffekt */
 }
 
