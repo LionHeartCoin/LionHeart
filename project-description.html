@@ -57,28 +57,44 @@
             </ol>
         </section>
     </div>
+
+    <!-- Back to Home Button -->
     <div class="back-button-container">
-    <a href="index.html" class="back-button">Back to Home</a>
-</div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 LionHeart Token. All Rights Reserved.</p>
     </footer>
 
+    <!-- Telegram-Button -->
+    <div class="telegram-button">
+        <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
+            Join us on Telegram
+        </a>
+    </div>
+
+    <!-- Copy Contract Address Button -->
+    <div class="copy-container">
+        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
+        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
+    </div>
+
     <!-- JavaScript -->
     <script>
         // Funktion zum Kopieren der Contract-Adresse
-function copyContractAddress() {
-    const contractAddress = "0xYourContractAddressHere"; // Ersetze durch deine Contract-Adresse
-    navigator.clipboard.writeText(contractAddress).then(() => {
-        const feedback = document.getElementById("copy-feedback");
-        feedback.style.display = "block"; // Feedback anzeigen
-        setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
-    }).catch(err => {
-        console.error("Failed to copy: ", err);
-    });
-}
+        function copyContractAddress() {
+            const contractAddress = "0xYourContractAddressHere"; // Ersetze durch deine Contract-Adresse
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                const feedback = document.getElementById("copy-feedback");
+                feedback.style.display = "block"; // Feedback anzeigen
+                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+
         // Funktion für das Dropdown-Menü
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
@@ -86,6 +102,7 @@ function copyContractAddress() {
             menu.classList.toggle('visible');
         }
 
+        // Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
@@ -95,17 +112,5 @@ function copyContractAddress() {
             }
         });
     </script>
-    <!-- Telegram-Button -->
-<div class="telegram-button">
-    <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
-        Join us on Telegram
-    </a>
-</div>
-
-<!-- Copy Contract Address Button -->
-<div class="copy-container">
-    <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
-    <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
-</div>    
 </body>
 </html>
