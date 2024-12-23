@@ -13,7 +13,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Elemente gleichmäßig verteilen */
     padding: 10px 20px;
     background-color: #ffffff;
     height: 120px;
@@ -21,7 +21,7 @@ header {
     z-index: 1000;
 }
 
-/* Menü-Button */
+/* Menü-Button (links im Header) */
 .menu-container {
     flex: 0 0 auto;
 }
@@ -37,7 +37,7 @@ header {
 
 /* Logo in der Mitte */
 .header-logo {
-    flex: 1;
+    flex: 1; /* Flexibles Element */
     text-align: center;
 }
 
@@ -46,7 +46,7 @@ header {
     height: auto;
 }
 
-/* Twitter-Button */
+/* Twitter-Button (rechts im Header) */
 .twitter-button {
     flex: 0 0 auto;
     display: flex;
