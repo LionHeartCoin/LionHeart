@@ -1,103 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LionHeart Coin</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="menu-container">
-            <!-- Menü-Button -->
-            <button class="menu-button" onclick="toggleMenu()">Menu</button>
-            
-            <!-- Dropdown-Menü -->
-            <nav id="dropdown-menu" class="dropdown-menu">
-                <ul>
-                    <li><a href="project-description.html">Project Description</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+/* Allgemeine Stile */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-        <!-- Logo -->
-        <div class="header-logo">
-            <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
-        </div>
-    </header>
+.container {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-    <!-- Hauptinhalt -->
-    <div class="container">
-        <h1>Welcome to LionHeart</h1>
-        <p>The Coin with heart and purpose. Buy now and join the movement!</p>
-        <a href="buylink" 
-           target="_blank" 
-           class="buy-button">
-            Buy - Coming Soon!
-        </a>
-    </div>
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
 
-    <!-- Widget-Bereich -->
-    <div class="widget-container">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
-        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    </div>
+.menu-container {
+    position: relative;
+}
 
-    <!-- Copy Contract Address Button -->
-    <div class="copy-container">
-        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
-        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
-    </div>
+.menu-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    <!-- Telegram-Button -->
-    <div class="telegram-button">
-        <a href="https://t.me/LionHeartCoin" target="_blank" class="telegram-link">
-            Join us on Telegram
-        </a>
-    </div>
+.menu-button:hover {
+    background-color: #c0392b;
+}
 
-    <!-- JavaScript -->
-    <script>
-        // Funktion zum Umschalten des Dropdown-Menüs
-        function toggleMenu() {
-            const menu = document.getElementById('dropdown-menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
+/* Dropdown-Menü */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 2000;
+}
 
-        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('dropdown-menu');
-            const button = document.querySelector('.menu-button');
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.style.display = 'none';
-            }
-        });
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            const container = document.querySelector('.container');
-            const headerHeight = header.offsetHeight; // Höhe des Headers
-            container.style.paddingTop = `${headerHeight + 20}px`; // Dynamischer Abstand
-        });
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
-        // Funktion zum Kopieren der Contract-Adresse
-        function copyContractAddress() {
-            const contractAddress = "0xYourContractAddressHere"; // Deine Contract-Adresse hier eintragen
-            navigator.clipboard.writeText(contractAddress).then(() => {
-                const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block"; // Feedback anzeigen
-                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
-            }).catch(err => {
-                console.error("Failed to copy: ", err);
-            });
-        }
-    </script>
-</body>
-</html>
+.dropdown-menu ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Buy-Button */
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
+
+/* Copy Contract Button */
+.copy-container {
+    position: fixed;
+    bottom: 80px; /* Über Telegram-Button */
+    right: 20px; /* Rechts ausgerichtet */
+    text-align: center;
+}
+
+.copy-button {
+    background-color: #27ae60; /* Grün */
+    color: #ffffff; /* Weiß */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copy-button:hover {
+    background-color: #229954; /* Dunkleres Grün */
+    transform: scale(1.05); /* Leichter Vergrößerungseffekt */
+}
+
+.copy-feedback {
+    display: none;
+    color: #27ae60;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Telegram-Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0088cc;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.telegram-button:hover {
+    background-color: #006699;
+}
+
+.telegram-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
