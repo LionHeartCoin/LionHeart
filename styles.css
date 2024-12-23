@@ -50,6 +50,7 @@ header {
 .twitter-button {
     flex: 0 0 auto;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -61,6 +62,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .twitter-button img {
@@ -81,39 +83,39 @@ header {
 
 /* Widget-Bereich */
 .widget-container {
-    display: block; /* Blockdarstellung */
-    width: 350px; /* Feste Breite passend zum Widget */
-    margin: 20px auto; /* Zentrierung */
-    padding: 10px; /* Innenabstand */
-    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
-    border-radius: 8px; /* Abgerundete Ecken */
-    text-align: center; /* Zentrierter Inhalt */
-    height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
+    display: block;
+    width: 350px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    height: auto;
 }
 
 .widget-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
-    transform: translateY(-2px); /* Leichte Hebung */
-    transition: all 0.3s ease-in-out; /* Übergangsanimation */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
 }
 
 .widget-container .gfm-embed {
     display: block;
-    margin: auto; /* Zentriert das Widget innerhalb des Containers */
+    margin: auto;
 }
 
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px; /* Über Telegram-Button */
+    bottom: 80px;
     right: 20px;
     text-align: center;
-    z-index: 1000; /* Immer sichtbar */
+    z-index: 1000;
 }
 
 .copy-button {
-    background-color: #27ae60; /* Grün */
+    background-color: #27ae60;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -125,23 +127,23 @@ header {
 }
 
 .copy-button:hover {
-    background-color: #229954; /* Dunkleres Grün */
-    transform: scale(1.05); /* Leichte Vergrößerung */
+    background-color: #229954;
+    transform: scale(1.05);
 }
 
 /* Telegram-Button */
 .telegram-button {
     position: fixed;
-    bottom: 20px; /* Abstand vom unteren Rand */
-    right: 20px; /* Abstand vom rechten Rand */
+    bottom: 20px;
+    right: 20px;
     background-color: #0088cc;
     border-radius: 50px;
     padding: 10px 20px;
-    z-index: 1000; /* Immer sichtbar */
+    z-index: 1000;
 }
 
 .telegram-button:hover {
-    background-color: #006699; /* Dunklerer Farbton beim Hover */
+    background-color: #006699;
 }
 
 .telegram-link {
