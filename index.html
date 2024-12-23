@@ -70,11 +70,13 @@
 
     <!-- JavaScript -->
     <script>
+        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
             menu.classList.toggle('hidden');
         }
 
+        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
@@ -83,6 +85,7 @@
             }
         });
 
+        // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
             const container = document.querySelector('.container');
@@ -90,6 +93,7 @@
             container.style.paddingTop = `${headerHeight + 20}px`;
         });
 
+        // Funktion zum Kopieren der Contract-Adresse
         function copyContractAddress() {
             const contractAddress = "0xYourContractAddressHere";
             navigator.clipboard.writeText(contractAddress).then(() => {
