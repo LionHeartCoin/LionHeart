@@ -11,78 +11,61 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    box-sizing: border-box;
-    height: 120px; /* Höhe des Headers */
+    background-color: #ffffff;
+    height: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Menü-Button (links im Header) */
+/* Menü-Button */
 .menu-container {
     flex: 0 0 auto;
 }
 
 .menu-button {
     background-color: #e74c3c;
-    color: #fff;
+    color: white;
     border: none;
     padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.menu-button:hover {
-    background-color: #c0392b;
 }
 
 /* Logo in der Mitte */
 .header-logo {
     flex: 1;
-    text-align: center; /* Logo zentrieren */
+    text-align: center;
 }
 
 .header-logo .logo {
-    max-width: 120px; /* Originalgröße des Logos */
+    max-width: 100px;
     height: auto;
 }
 
-/* Twitter-Button (rechts im Header) */
+/* Twitter-Button */
 .twitter-button {
     flex: 0 0 auto;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    margin-left: auto;
 }
 
 .twitter-button a {
-    display: inline-block;
-    max-width: 40px; /* Feste Breite des Buttons */
-    height: auto; /* Feste Höhe des Buttons */
-    background-color: #1da1f2; /* Twitter-Blau */
-    border-radius: 50%; /* Kreisförmig */
+    width: 40px;
+    height: 40px;
+    background-color: #1da1f2;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.twitter-button a:hover {
-    background-color: #0d95e8; /* Dunkleres Blau beim Hover */
-    transform: scale(1.1); /* Leichte Vergrößerung */
-}
-
-.twitter-icon {
-    max-width: 20px; /* Symbolgröße */
-    max-height: 20px;
+.twitter-button img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Hauptinhalt */
