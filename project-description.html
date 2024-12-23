@@ -3,114 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Description - LionHeart Token</title>
+    <title>Project Description</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="menu-container">
-            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
-            
-            <!-- Dropdown-Menü -->
-            <nav id="dropdown-menu" class="dropdown-menu hidden">
+            <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
-
-        <!-- Logo -->
-        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        <div class="header-logo">
+            <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        </div>
+        <div class="twitter-button">
+            <a href="https://twitter.com/lionheartcoin" target="_blank">
+                <img src="logo-black.png" alt="Twitter" class="twitter-icon">
+            </a>
+        </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <div class="container">
-        <h1>About LionHeart Token</h1>
-        <p class="intro-text">LionHeart Token is the cryptocurrency with a heart. Built on trust, innovation, and purpose, it empowers communities and drives positive change.</p>
-
-        <!-- Sektion 1 -->
-        <section class="description-section">
+        <h1>About LionHeart</h1>
+        <section>
             <h2>Our Vision</h2>
-            <p>At LionHeart Token, our vision is to create a decentralized platform that empowers individuals while contributing to global initiatives. We believe in transparency, sustainability, and building a better future for all.</p>
+            <p>At LionHeart, our mission is...</p>
         </section>
-
-        <!-- Sektion 2 -->
-        <section class="description-section">
+        <section>
             <h2>Tokenomics</h2>
-            <ul>
-                <li><strong>Total Supply:</strong> 1,000,000,000 LHT</li>
-                <li><strong>Burn Mechanism:</strong> 10% of every transaction is burned to increase scarcity.</li>
-                <li><strong>Charity Pool:</strong> 5% of every transaction goes directly to global causes.</li>
-            </ul>
+            <p>Details about the coin...</p>
         </section>
-
-        <!-- Sektion 3 -->
-        <section class="description-section">
-            <h2>How to Get Started</h2>
-            <ol>
-                <li>Download a compatible wallet (e.g., MetaMask).</li>
-                <li>Add LionHeart Token to your wallet using our contract address.</li>
-                <li>Swap your desired cryptocurrency for LHT on our partner platforms.</li>
-            </ol>
-        </section>
-    </div>
-
-    <!-- Back to Home Button -->
-    <div class="back-button-container">
         <a href="index.html" class="back-button">Back to Home</a>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 LionHeart Token. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Telegram-Button -->
-    <div class="telegram-button">
-        <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
-            Join us on Telegram
-        </a>
-    </div>
-
-    <!-- Copy Contract Address Button -->
-    <div class="copy-container">
-        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
-        <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        // Funktion zum Kopieren der Contract-Adresse
-        function copyContractAddress() {
-            const contractAddress = "0xYourContractAddressHere"; // Ersetze durch deine Contract-Adresse
-            navigator.clipboard.writeText(contractAddress).then(() => {
-                const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block"; // Feedback anzeigen
-                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
-            }).catch(err => {
-                console.error("Failed to copy: ", err);
-            });
-        }
-
-        // Funktion für das Dropdown-Menü
-        function toggleMenu() {
-            const menu = document.getElementById('dropdown-menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('visible');
-        }
-
-        // Menü schließen, wenn außerhalb geklickt wird
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('dropdown-menu');
-            const button = document.querySelector('.menu-button');
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.classList.add('hidden');
-                menu.classList.remove('visible');
-            }
-        });
-    </script>
 </body>
 </html>
