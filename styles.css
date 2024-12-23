@@ -22,6 +22,46 @@ header {
     height: 120px; /* Höhe des Headers */
 }
 
+/* Menü-Button (links im Header) */
+.menu-container {
+    flex: 0 0 auto;
+}
+
+/* Logo in der Mitte */
+.header-logo {
+    flex: 1;
+    text-align: center; /* Logo zentrieren */
+}
+
+.header-logo .logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Twitter-Button (rechts im Header) */
+.twitter-button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.twitter-button a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.twitter-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.twitter-icon:hover {
+    transform: scale(1.2); /* Leichte Vergrößerung bei Hover */
+}
+
 /* Hauptinhalt */
 .container {
     padding: 100px 20px 40px; /* Abstand vom Header */
@@ -43,7 +83,6 @@ header {
     font-size: 1.5rem;
     margin-bottom: 10px;
     text-align: center; /* mittig ausgerichtet für bessere Lesbarkeit */
-
 }
 
 .description-section p,
@@ -53,7 +92,6 @@ header {
     line-height: 1.6;
     color: #34495e; /* Sanfter Farbton für Texte */
     text-align: center; /* mittig ausgerichtet für bessere Lesbarkeit */
-
 }
 
 /* Listen */
@@ -155,55 +193,6 @@ header {
     color: #e74c3c;
 }
 
-/* Logo */
-.logo {
-    max-width: 120px;
-    height: auto;
-}
-
-/* Buy-Button */
-.buy-button {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #d4af37; /* Gold */
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
-}
-
-.buy-button:hover {
-    background-color: #b58e2f; /* Dunkleres Gold */
-    transform: scale(1.05); /* Leichte Vergrößerung */
-}
-
-/* Back to Home Button */
-.back-button-container {
-    text-align: center;
-    margin: 20px auto; /* Abstand um den Button */
-}
-
-.back-button {
-    display: inline-block;
-    background-color: #3498db; /* Blau */
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
-}
-
-.back-button:hover {
-    background-color: #2980b9; /* Dunkleres Blau */
-    transform: scale(1.05); /* Leichte Vergrößerung */
-}
-
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
@@ -230,14 +219,6 @@ header {
     transform: scale(1.05); /* Leichte Vergrößerung */
 }
 
-.copy-feedback {
-    display: none;
-    color: #27ae60;
-    margin-top: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
 /* Telegram-Button */
 .telegram-button {
     position: fixed;
@@ -258,6 +239,7 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
+
 /* Kontaktformular */
 .contact-form {
     max-width: 600px;
