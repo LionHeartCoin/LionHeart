@@ -34,6 +34,7 @@ header {
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .menu-button:hover {
@@ -42,7 +43,7 @@ header {
 
 .dropdown-menu {
     position: absolute;
-    top: 50px; /* Direkt unter dem Menü-Button */
+    top: 50px;
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -86,7 +87,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 10px; /* Abstand vom Logo */
+    margin-left: 10px;
 }
 
 .twitter-button img {
@@ -112,17 +113,18 @@ header {
 /* Buy-Button */
 .buy-button {
     display: inline-block;
-    background-color: #d4af37; /* Gold */
+    background-color: #d4af37;
     color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buy-button:hover {
     background-color: #b58e2f;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
