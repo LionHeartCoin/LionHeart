@@ -18,11 +18,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    box-sizing: border-box;
-    height: 120px; /* Höhe des Headers */
+    height: 100px;
 }
 
-/* Menü-Button (links im Header) */
+/* Menü-Button */
 .menu-container {
     flex: 0 0 auto;
 }
@@ -42,58 +41,77 @@ header {
     background-color: #c0392b;
 }
 
+/* Dropdown-Menü */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 2000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 /* Logo in der Mitte */
 .header-logo {
     flex: 1;
-    text-align: center; /* Logo zentrieren */
+    text-align: center;
 }
 
 .header-logo .logo {
-    max-width: 120px;
+    max-width: 80px;
     height: auto;
 }
 
-/* Twitter-Button (rechts im Header) */
+/* Twitter-Button */
 .twitter-button {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: auto;
 }
 
 .twitter-button a {
-    display: inline-block;
-    width: 40px; /* Feste Breite des Buttons */
-    height: 40px; /* Feste Höhe des Buttons */
-    background-color: #1da1f2; /* Twitter-Blau */
-    border-radius: 50%; /* Kreisförmig */
+    width: 40px;
+    height: 40px;
+    background-color: #1da1f2;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.twitter-button a:hover {
-    background-color: #0d95e8; /* Dunkleres Blau beim Hover */
-    transform: scale(1.1); /* Leichte Vergrößerung */
-}
-
-.twitter-icon {
-    width: 20px; /* Symbolgröße */
-    height: 20px;
+.twitter-button img {
+    width: 18px;
+    height: 18px;
 }
 
 /* Hauptinhalt */
 .container {
-    padding: 100px 20px 40px; /* Abstand vom Header */
+    padding: 140px 20px 40px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 800px;
-    margin: 20px auto; /* Zentrierung */
-    text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
+    margin: 20px auto;
+    text-align: center;
 }
 
 /* Widget-Bereich */
