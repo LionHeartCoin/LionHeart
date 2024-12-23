@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LionHeart Token</title>
+    <title>LionHeart Coin</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Container -->
         <div class="menu-container">
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
-            
-            <!-- Dropdown-Menü -->
             <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
@@ -21,67 +19,54 @@
                 </ul>
             </nav>
         </div>
-
-        <!-- Logo -->
-        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        <div class="header-logo">
+            <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        </div>
+        <div class="twitter-button">
+            <a href="https://twitter.com/lionheartcoin" target="_blank">
+                <img src="logo-black.png" alt="Twitter" class="twitter-icon">
+            </a>
+        </div>
     </header>
 
     <!-- Hauptinhalt -->
     <div class="container">
-        <h1>Welcome to LionHeart Token</h1>
-        <p>The token with heart and purpose. Buy now and join the movement!</p>
-        <a href="https://quickswap.exchange/#/swap?outputCurrency=0x4BFDCc8D21B20710c88e8b09Ca72f45e581E8310" 
-           target="_blank" 
-           class="buy-button">
-            Buy LionHeart Token on Quickswap
-        </a>
+        <h1>Welcome to LionHeart</h1>
+        <p>The Coin with heart and purpose. Buy now and join the movement!</p>
+        <a href="buylink" target="_blank" class="buy-button">Buy - Coming Soon!</a>
     </div>
 
-    <!-- Widget-Bereich -->
+    <!-- Widget -->
     <div class="widget-container">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/large?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium"></div>
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
-    <!-- Copy Contract Address Button -->
+    <!-- Copy Address -->
     <div class="copy-container">
         <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
         <span id="copy-feedback" class="copy-feedback">Contract Address copied!</span>
     </div>
 
-    <!-- Telegram-Button -->
+    <!-- Telegram -->
     <div class="telegram-button">
-        <a href="https://t.me/yourTelegramGroupLink" target="_blank" class="telegram-link">
-            Join us on Telegram
-        </a>
+        <a href="https://t.me/LionHeartCoin" target="_blank" class="telegram-link">Join us on Telegram</a>
     </div>
 
-    <!-- JavaScript -->
     <script>
-        // Funktion zum Umschalten des Dropdown-Menüs
+        // Dropdown-Menü Funktion
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('dropdown-menu');
-            const button = document.querySelector('.menu-button');
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.style.display = 'none';
-            }
-        });
-
-        // Funktion zum Kopieren der Contract-Adresse
+        // Contract-Adresse kopieren
         function copyContractAddress() {
-            const contractAddress = "0xYourContractAddressHere"; // Deine Contract-Adresse hier eintragen
+            const contractAddress = "0xYourContractAddressHere";
             navigator.clipboard.writeText(contractAddress).then(() => {
                 const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block"; // Feedback anzeigen
-                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
-            }).catch(err => {
-                console.error("Failed to copy: ", err);
+                feedback.style.display = "block";
+                setTimeout(() => feedback.style.display = "none", 2000);
             });
         }
     </script>
