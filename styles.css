@@ -27,6 +27,21 @@ header {
     flex: 0 0 auto;
 }
 
+.menu-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #c0392b;
+}
+
 /* Logo in der Mitte */
 .header-logo {
     flex: 1;
@@ -49,17 +64,25 @@ header {
 
 .twitter-button a {
     display: inline-block;
+    width: 40px; /* Feste Breite des Buttons */
+    height: 40px; /* Feste Höhe des Buttons */
+    background-color: #1da1f2; /* Twitter-Blau */
+    border-radius: 50%; /* Kreisförmig */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.twitter-button a:hover {
+    background-color: #0d95e8; /* Dunkleres Blau beim Hover */
+    transform: scale(1.1); /* Leichte Vergrößerung */
 }
 
 .twitter-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.twitter-icon:hover {
-    transform: scale(1.2); /* Leichte Vergrößerung bei Hover */
+    width: 20px; /* Symbolgröße */
+    height: 20px;
 }
 
 /* Hauptinhalt */
@@ -73,7 +96,29 @@ header {
     text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
 }
 
-/* Restliche CSS (unverändert) */
+/* Widget-Bereich */
+.widget-container {
+    display: block; /* Blockdarstellung */
+    width: 350px; /* Feste Breite passend zum Widget */
+    margin: 20px auto; /* Zentrierung */
+    padding: 10px; /* Innenabstand */
+    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    text-align: center; /* Zentrierter Inhalt */
+    height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
+}
+
+.widget-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
+    transform: translateY(-2px); /* Leichte Hebung */
+    transition: all 0.3s ease-in-out; /* Übergangsanimation */
+}
+
+.widget-container .gfm-embed {
+    display: block;
+    margin: auto; /* Zentriert das Widget innerhalb des Containers */
+}
 
 /* Copy Contract Button */
 .copy-container {
@@ -99,4 +144,25 @@ header {
 .copy-button:hover {
     background-color: #229954; /* Dunkleres Grün */
     transform: scale(1.05); /* Leichte Vergrößerung */
+}
+
+/* Telegram-Button */
+.telegram-button {
+    position: fixed;
+    bottom: 20px; /* Abstand vom unteren Rand */
+    right: 20px; /* Abstand vom rechten Rand */
+    background-color: #0088cc;
+    border-radius: 50px;
+    padding: 10px 20px;
+    z-index: 1000; /* Immer sichtbar */
+}
+
+.telegram-button:hover {
+    background-color: #006699; /* Dunklerer Farbton beim Hover */
+}
+
+.telegram-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
