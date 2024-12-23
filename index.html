@@ -13,9 +13,11 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Menü-Button -->
         <div class="menu-container">
+            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            
+            <!-- Dropdown-Menü -->
             <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
@@ -28,37 +30,74 @@
         <div class="header-logo">
             <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
         </div>
-
-        <!-- Twitter-Button -->
-        <div class="twitter-button">
-            <a href="https://twitter.com/lionheartcoin" target="_blank">
-                <img src="logo-black.png" alt="Twitter" class="twitter-icon">
-            </a>
-        </div>
     </header>
 
     <!-- Hauptinhalt -->
     <div class="container">
         <h1>Welcome to LionHeart</h1>
         <p>The Coin with heart and purpose. Buy now and join the movement!</p>
+        <a href="buylink" 
+           target="_blank" 
+           class="buy-button">
+            Buy - Coming Soon!
+        </a>
+    </div>
+
+    <!-- Widget-Bereich -->
+    <div class="widget-container">
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
+
+    <!-- Copy Contract Address Button -->
+    <div class="copy-container">
+        <button class="copy-button" onclick="copyContractAddress()">Copy Contract Address</button>
+        <span id="copy-feedback" class="copy-feedback">Available after launch</span>
+    </div>
+
+    <!-- Telegram-Button -->
+    <div class="telegram-button">
+        <a href="https://t.me/LionHeartCoin" target="_blank" class="telegram-link">
+            Join us on Telegram
+        </a>
     </div>
 
     <!-- JavaScript -->
     <script>
-        // Dropdown-Menü umschalten
+        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
 
         // Dropdown-Menü schließen, wenn außerhalb geklickt wird
-        document.addEventListener('click', function (event) {
+        document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
             if (!menu.contains(event.target) && !button.contains(event.target)) {
                 menu.style.display = 'none';
             }
         });
+
+        // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            const container = document.querySelector('.container');
+            const headerHeight = header.offsetHeight; // Höhe des Headers
+            container.style.paddingTop = `${headerHeight + 20}px`; // Dynamischer Abstand
+        });
+
+        // Funktion zum Kopieren der Contract-Adresse
+        function copyContractAddress() {
+            const contractAddress = "0xYourContractAddressHere"; // Deine Contract-Adresse hier eintragen
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                const feedback = document.getElementById("copy-feedback");
+                feedback.style.display = "block"; // Feedback anzeigen
+                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
     </script>
 </body>
 </html>
