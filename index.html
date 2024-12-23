@@ -20,6 +20,7 @@
             <!-- Dropdown-Menü -->
             <nav id="dropdown-menu" class="dropdown-menu">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="project-description.html">Project Description</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -97,10 +98,11 @@
         // Funktion zum Kopieren der Contract-Adresse
         function copyContractAddress() {
             const contractAddress = "0xYourContractAddressHere";
+            const feedback = document.getElementById("copy-feedback");
+            feedback.style.display = 'none'; // Hinweis ausblenden
             navigator.clipboard.writeText(contractAddress).then(() => {
-                const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block";
-                setTimeout(() => feedback.style.display = "none", 2000);
+                feedback.style.display = 'block'; // Feedback anzeigen
+                setTimeout(() => feedback.style.display = 'none', 2000); // Nach 2 Sekunden ausblenden
             });
         }
     </script>
