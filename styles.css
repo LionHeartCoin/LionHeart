@@ -5,6 +5,11 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    padding: 80px 20px;
+    text-align: center;
+}
+
 /* Header */
 header {
     position: fixed;
@@ -18,13 +23,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    height: 120px; /* Höhe des Headers */
     box-sizing: border-box;
 }
 
-/* Menü-Button (links im Header) */
 .menu-container {
-    flex: 0 0 auto;
+    position: relative;
 }
 
 .menu-button {
@@ -49,10 +52,10 @@ header {
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    display: none; /* Standardmäßig ausgeblendet */
+    display: none;
     z-index: 2000;
 }
 
@@ -64,70 +67,48 @@ header {
 
 .dropdown-menu ul li a {
     text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    display: block;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .dropdown-menu ul li a:hover {
-    background-color: #f5f5f5;
     color: #e74c3c;
 }
 
 /* Logo */
-.header-logo {
-    flex: 1;
-    text-align: center;
-}
-
-.header-logo .logo {
-    max-width: 120px;
+.logo {
+    max-width: 150px;
     height: auto;
-}
-
-/* Hauptinhalt */
-.container {
-    padding: 140px 20px 40px; /* Abstand vom Header */
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 20px auto; /* Zentrierung */
-    text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
 }
 
 /* Buy-Button */
 .buy-button {
     display: inline-block;
     margin-top: 20px;
-    background-color: #d4af37; /* Gold */
+    background-color: #3498db;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    font-size: 1rem;
     border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
+    transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
-    background-color: #b58e2f; /* Dunkleres Gold */
-    transform: scale(1.05); /* Leichte Vergrößerung */
+    background-color: #2980b9;
 }
 
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
     bottom: 80px; /* Über Telegram-Button */
-    right: 20px;
+    right: 20px; /* Rechts ausgerichtet */
     text-align: center;
-    z-index: 1000;
 }
 
 .copy-button {
-    background-color: #27ae60;
-    color: #ffffff;
+    background-color: #27ae60; /* Grün */
+    color: #ffffff; /* Weiß */
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -138,8 +119,8 @@ header {
 }
 
 .copy-button:hover {
-    background-color: #229954;
-    transform: scale(1.05);
+    background-color: #229954; /* Dunkleres Grün */
+    transform: scale(1.05); /* Leichter Vergrößerungseffekt */
 }
 
 .copy-feedback {
@@ -158,7 +139,6 @@ header {
     background-color: #0088cc;
     border-radius: 50px;
     padding: 10px 20px;
-    z-index: 1000;
 }
 
 .telegram-button:hover {
