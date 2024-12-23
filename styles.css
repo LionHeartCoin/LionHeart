@@ -85,10 +85,9 @@ header {
 
 /* Twitter-Button */
 .twitter-button {
-    flex: 0 0 auto;
-    display: flex;
+    margin-right: 10px; /* Abstand zum rechten Rand */
+    display: flex; /* Falls nötig, um es mit anderen Elementen auszurichten */
     align-items: center;
-    justify-content: flex-end;
 }
 
 .twitter-button a {
