@@ -13,12 +13,11 @@
 <body>
     <!-- Header -->
     <header>
+        <!-- Menü-Button -->
         <div class="menu-container">
-            <!-- Menü-Button -->
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
-            
             <!-- Dropdown-Menü -->
-            <nav id="dropdown-menu" class="dropdown-menu">
+            <nav id="dropdown-menu" class="dropdown-menu hidden">
                 <ul>
                     <li><a href="project-description.html">Project Description</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -33,7 +32,7 @@
 
         <!-- Twitter-Button -->
         <div class="twitter-button">
-            <a href="https://twitter.com/lionheartcoin" target="_blank">
+            <a href="https://twitter.com/lionheartcoin" target="_blank" rel="noopener">
                 <img src="logo-black.png" alt="Twitter" class="twitter-icon">
             </a>
         </div>
@@ -43,16 +42,12 @@
     <div class="container">
         <h1>Welcome to LionHeart</h1>
         <p>The Coin with heart and purpose. Buy now and join the movement!</p>
-        <a href="buylink" 
-           target="_blank" 
-           class="buy-button">
-            Buy - Coming Soon!
-        </a>
+        <a href="buylink" target="_blank" class="buy-button">Buy - Coming Soon!</a>
     </div>
 
     <!-- Widget-Bereich -->
     <div class="widget-container">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium"></div>
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
 
@@ -71,36 +66,32 @@
 
     <!-- JavaScript -->
     <script>
-        // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
             const menu = document.getElementById('dropdown-menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            menu.classList.toggle('hidden');
         }
 
-        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('dropdown-menu');
             const button = document.querySelector('.menu-button');
             if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.style.display = 'none';
+                menu.classList.add('hidden');
             }
         });
 
-        // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
             const container = document.querySelector('.container');
-            const headerHeight = header.offsetHeight; // Höhe des Headers
-            container.style.paddingTop = `${headerHeight + 20}px`; // Dynamischer Abstand
+            const headerHeight = header.offsetHeight;
+            container.style.paddingTop = `${headerHeight + 20}px`;
         });
 
-        // Funktion zum Kopieren der Contract-Adresse
         function copyContractAddress() {
-            const contractAddress = "0xYourContractAddressHere"; // Deine Contract-Adresse hier eintragen
+            const contractAddress = "0xYourContractAddressHere";
             navigator.clipboard.writeText(contractAddress).then(() => {
                 const feedback = document.getElementById("copy-feedback");
-                feedback.style.display = "block"; // Feedback anzeigen
-                setTimeout(() => feedback.style.display = "none", 2000); // Feedback nach 2 Sekunden ausblenden
+                feedback.style.display = "block";
+                setTimeout(() => feedback.style.display = "none", 2000);
             }).catch(err => {
                 console.error("Failed to copy: ", err);
             });
