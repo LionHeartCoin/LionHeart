@@ -24,6 +24,22 @@
                 </ul>
             </nav>
         </div>
+        <script>
+        // Funktion zum Umschalten des Dropdown-Menüs
+        function toggleMenu() {
+            const menu = document.getElementById('dropdown-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('dropdown-menu');
+            const button = document.querySelector('.menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+             <script>    
 
         <!-- Logo -->
         <div class="header-logo">
@@ -33,6 +49,8 @@
         <!-- Twitter-Button -->
         <a href="https://twitter.com/lionheartcoin" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">
     Follow @lionheartcoin
+    </script> async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+    </script>
 </a>
 
     </header>
@@ -69,20 +87,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Funktion zum Umschalten des Dropdown-Menüs
-        function toggleMenu() {
-            const menu = document.getElementById('dropdown-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Dropdown-Menü schließen, wenn außerhalb geklickt wird
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('dropdown-menu');
-            const button = document.querySelector('.menu-button');
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.classList.add('hidden');
-            }
-        });
 
         // Dynamische Anpassung des Inhaltsabstands basierend auf der Header-Höhe
         document.addEventListener('DOMContentLoaded', () => {
@@ -103,7 +107,7 @@
                 console.error("Failed to copy: ", err);
             });
         }
-        async src="https://platform.twitter.com/widgets.js" charset="utf-8"
-    </script>
+            <script>
+
 </body>
 </html>
