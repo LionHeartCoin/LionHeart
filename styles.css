@@ -13,7 +13,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Elemente gleichmäßig verteilen */
+    justify-content: space-between;
     padding: 10px 20px;
     background-color: #ffffff;
     height: 120px;
@@ -37,7 +37,7 @@ header {
 
 /* Logo in der Mitte */
 .header-logo {
-    flex: 1; /* Flexibles Element */
+    flex: 1;
     text-align: center;
 }
 
@@ -58,7 +58,7 @@ header {
     width: 40px;
     height: 40px;
     background-color: #1da1f2;
-    border-radius: 50%; /* Rundes Design */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,21 +66,19 @@ header {
 }
 
 .twitter-button img {
-    max-width: 100%; /* Verhindert Überschreitungen */
-    max-height: 100%; /* Verhindert Überschreitungen */
-    width: 20px; /* Feste Breite */
-    height: 20px; /* Feste Höhe */
+    width: 20px;
+    height: 20px;
 }
 
 /* Hauptinhalt */
 .container {
-    padding: 140px 20px 40px; /* Abstand vom Header */
+    padding: 140px 20px 40px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 800px;
-    margin: 20px auto; /* Zentrierung */
-    text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
+    margin: 20px auto;
+    text-align: center;
 }
 
 /* Widget-Bereich */
