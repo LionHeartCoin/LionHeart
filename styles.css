@@ -72,13 +72,13 @@ header {
 
 /* Hauptinhalt */
 .container {
-    padding: 140px 20px 40px;
+    padding: 140px 20px 40px; /* Abstand vom Header */
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
+    margin: 20px auto; /* Zentrierung */
+    text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
 }
 
 /* Widget-Bereich */
