@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LionHeart Coin</title>
     <link rel="stylesheet" href="styles.css">
-    
     <!-- Favicon -->
-<!-- Standard Favicon -->
-<link rel="shortcut icon" href="favicon.ico">
-
-<!-- PNG als Fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
 <body>
     <!-- Header -->
     <header>
@@ -31,15 +27,16 @@
         </div>
 
         <!-- Logo -->
-        <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
-         <div class="twitter-button">
-        <a href="https://x.com/lionheartcoin?s=21&t=7XFU1QiVJ4R6Prp3LRQxIw" 
-           class="twitter-follow-button" 
-           data-show-screen-name="false" 
-           data-show-count="false">
-            Follow LHC
-        </a>
-    </div>
+        <div class="header-logo">
+            <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        </div>
+
+        <!-- Twitter-Button -->
+        <div class="twitter-button">
+            <a href="https://x.com/lionheartcoin?s=21&t=7XFU1QiVJ4R6Prp3LRQxIw" target="_blank">
+                <img src="logo-black.png" alt="Twitter" class="twitter-icon">
+            </a>
+        </div>
     </header>
 
     <!-- Hauptinhalt -->
@@ -55,7 +52,6 @@
 
     <!-- Widget-Bereich -->
     <div class="widget-container">
-        <!-- Neues Widget -->
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/lionheart-coin/widget/medium?sharesheet=manage hero&attribution_id=sl:cdb57b3e-fecc-43df-8434-998535ef6ba1"></div>
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
@@ -74,8 +70,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
     <script>
         // Funktion zum Umschalten des Dropdown-Menüs
         function toggleMenu() {
