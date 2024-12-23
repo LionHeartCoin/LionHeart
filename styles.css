@@ -60,6 +60,9 @@ header {
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
+    width: 40px; /* Feste Breite des Buttons */
+    height: 40px; /* Feste Höhe des Buttons */
+
 }
 
 .twitter-button a {
