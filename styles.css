@@ -64,8 +64,8 @@ header {
 
 .twitter-button a {
     display: inline-block;
-    width: 40px; /* Feste Breite des Buttons */
-    height: 40px; /* Feste Höhe des Buttons */
+    max-width: 40px; /* Feste Breite des Buttons */
+    height: auto; /* Feste Höhe des Buttons */
     background-color: #1da1f2; /* Twitter-Blau */
     border-radius: 50%; /* Kreisförmig */
     display: flex;
@@ -81,8 +81,8 @@ header {
 }
 
 .twitter-icon {
-    width: 20px; /* Symbolgröße */
-    height: 20px;
+    max-width: 20px; /* Symbolgröße */
+    max-height: 20px;
 }
 
 /* Hauptinhalt */
