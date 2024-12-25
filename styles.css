@@ -387,3 +387,81 @@ header {
     background-color: #b58e2f;
     transform: scale(1.05);
 }
+/* Allgemeiner Container */
+.container {
+    padding: 140px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Überschriften */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Diagramm-Sektion */
+.diagram-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Tokenomics Tabelle */
+.tokenomics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tokenomics-table th, .tokenomics-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.tokenomics-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.tokenomics-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #b58e2f;
+    transform: scale(1.05);
+}
