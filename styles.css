@@ -27,9 +27,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%; /* Mittig im Header */
-    transform: translateX(-50%);
+    position: absolute; /* Absolut positioniert */
+    left: 45%; /* Mittig ausgerichtet */
+    transform: translateX(-50%); /* Zentrierung */
 }
 
 .header-logo .logo {
@@ -40,8 +40,8 @@ header {
 /* Menü-Button */
 .menu-container {
     position: relative;
-    z-index: 10;
-    margin-left: -20px;
+    z-index: 10; /* Stellt sicher, dass es über dem Dropdown bleibt */
+    margin-left: -20px; /* Weiter nach links verschoben */
 }
 
 .menu-button {
@@ -89,6 +89,11 @@ header {
     padding: 0;
 }
 
+.dropdown-menu ul li {
+    margin: 0;
+    padding: 0;
+}
+
 .dropdown-menu ul li a {
     display: block;
     padding: 12px 18px;
@@ -96,8 +101,8 @@ header {
     color: #34495e;
     font-size: 1rem;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #ddd;
 }
 
 .dropdown-menu ul li a:last-child {
@@ -115,7 +120,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 30px;
+    margin-right: 30px; /* Weiter nach links verschoben */
 }
 
 .twitter-button a {
@@ -215,24 +220,21 @@ header {
 .copy-button {
     background-color: #27ae60;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     font-size: 1rem;
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .copy-button:hover {
     background-color: #229954;
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/.copy-feedback {
+.copy-feedback {
     display: none;
     color: #27ae60;
     margin-top: 5px;
@@ -247,13 +249,11 @@ header {
     right: 20px;
     background-color: #0088cc;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 15px;
+    text-decoration: none;
     border-radius: 50px;
-    font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
@@ -261,5 +261,4 @@ header {
 .telegram-button:hover {
     background-color: #006699;
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
