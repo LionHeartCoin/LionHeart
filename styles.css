@@ -148,26 +148,28 @@ header {
 
 /* Widget */
 .widget-container {
-    display: block;
-    width: 350px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    height: auto;
+    display: block; /* Blockdarstellung */
+    width: 100%; /* Automatische Anpassung an den Inhalt */
+    max-width: 350px; /* Begrenzung der Breite */
+    margin: 20px auto; /* Zentrierung */
+    padding: 10px; /* Innenabstand */
+    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    text-align: center; /* Zentrierter Inhalt */
+    height: auto; /* Höhe basierend auf dem Inhalt */
+    overflow: hidden; /* Überlauf verhindern */
 }
 
 .widget-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
+    transform: translateY(-2px); /* Leichte Hebung */
+    transition: all 0.3s ease-in-out; /* Übergangsanimation */
 }
 
 .widget-container .gfm-embed {
     display: block;
-    margin: auto;
+    margin: auto; /* Zentriert das Widget innerhalb des Containers */
 }
 
 /* Copy Contract Button */
