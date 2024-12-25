@@ -5,11 +5,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    padding: 80px 20px;
-    text-align: center;
-}
-
 /* Header */
 header {
     position: fixed;
@@ -17,32 +12,60 @@ header {
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 120px;
 }
 
+/* Header Logo (zentriert) */
+.header-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Absolut positioniert */
+    left: 50%; /* Mittig ausgerichtet */
+    transform: translateX(-50%); /* Zentrierung */
+}
+
+.header-logo .logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Menü-Button */
 .menu-container {
     position: relative;
+    z-index: 10; /* Stellt sicher, dass es über dem Dropdown bleibt */
+    margin-left: -20px; /* Weiter nach links verschoben */
 }
 
 .menu-button {
-    background-color: #e74c3c;
-    color: #fff;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+    color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-button:hover {
-    background-color: #c0392b;
+    background: linear-gradient(90deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Dropdown-Menü */
@@ -50,13 +73,14 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 0;
     display: none;
-    z-index: 2000;
+    z-index: 1000;
+    width: 220px;
 }
 
 .dropdown-menu ul {
@@ -65,62 +89,149 @@ header {
     padding: 0;
 }
 
+.dropdown-menu ul li {
+    margin: 0;
+    padding: 0;
+}
+
 .dropdown-menu ul li a {
+    display: block;
+    padding: 12px 18px;
     text-decoration: none;
-    color: #2c3e50;
+    color: #34495e;
     font-size: 1rem;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li a:last-child {
+    border-bottom: none;
 }
 
 .dropdown-menu ul li a:hover {
+    background-color: #f5f5f5;
     color: #e74c3c;
 }
 
-/* Logo */
-.logo {
-    max-width: 150px;
-    height: auto;
+/* Twitter-Button */
+.twitter-button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px; /* Weiter nach links verschoben */
 }
 
-/* Buy-Button */
-.buy-button {
+.twitter-button a {
     display: inline-block;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.twitter-button a:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.1);
+}
+
+.twitter-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hauptinhalt */
+.container {
+    padding: 140px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Buy Button */
+.buy-button {
+    background-color: #d4af37;
+    color: #fff;
     padding: 10px 20px;
+    text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buy-button:hover {
-    background-color: #2980b9;
+    background-color: #b58e2f;
+    transform: scale(1.05);
+}
+
+/* Widget-Bereich */
+.widget-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.widget-container iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
 }
 
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px; /* Über Telegram-Button */
-    right: 20px; /* Rechts ausgerichtet */
+    bottom: 80px;
+    right: 20px;
     text-align: center;
+    z-index: 1000;
 }
 
 .copy-button {
-    background-color: #27ae60; /* Grün */
-    color: #ffffff; /* Weiß */
-    border: none;
+    background-color: #27ae60;
+    color: white;
     padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .copy-button:hover {
-    background-color: #229954; /* Dunkleres Grün */
-    transform: scale(1.05); /* Leichter Vergrößerungseffekt */
+    background-color: #229954;
+    transform: scale(1.05);
 }
 
 .copy-feedback {
@@ -131,22 +242,23 @@ header {
     font-weight: bold;
 }
 
-/* Telegram-Button */
+/* Telegram Button */
 .telegram-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #0088cc;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
     border-radius: 50px;
-    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .telegram-button:hover {
     background-color: #006699;
-}
-
-.telegram-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
+    transform: scale(1.05);
 }
