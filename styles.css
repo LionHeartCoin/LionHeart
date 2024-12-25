@@ -159,7 +159,7 @@ header {
 
 .widget-container iframe {
     width: 100%; /* Passt das iframe an die Breite des Containers an */
-    height: 300px; /* Definiert die Höhe des Widgets (anpassbar) */
+    height: 200px; /* Definiert die Höhe des Widgets (anpassbar) */
     border: none; /* Entfernt den Rahmen */
     border-radius: 8px; /* Gleiche Ecken wie der Container */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
