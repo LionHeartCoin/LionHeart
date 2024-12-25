@@ -28,12 +28,12 @@ header {
 
 .menu-button {
     background-color: #e74c3c;
-    color: #fff;
+    color: white;
     border: none;
     padding: 10px 15px;
-    font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .menu-button:hover {
@@ -44,7 +44,7 @@ header {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 10px;
+    left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -76,47 +76,10 @@ header {
 }
 
 /* Twitter Button */
-.twitter-button {
-    margin-right: 30px; /* Abstand nach links */
-}
-
 .twitter-button img {
     width: 30px;
     height: 30px;
-}
-
-/* Hauptinhalt */
-.container {
-    padding: 140px 20px 40px;
-    text-align: center;
-}
-
-.main-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.intro-text {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Buy Button */
-.buy-button {
-    background-color: #d4af37;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.buy-button:hover {
-    background-color: #b58e2f;
-    transform: scale(1.05);
+    margin-right: 10px; /* Abstand zur rechten Seite */
 }
 
 /* Copy Button */
@@ -130,14 +93,8 @@ header {
     background-color: #27ae60;
     color: white;
     padding: 10px 20px;
-    font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.copy-button:hover {
-    background-color: #229954;
 }
 
 .copy-feedback {
@@ -154,11 +111,10 @@ header {
     right: 20px;
     background-color: #0088cc;
     color: white;
-    padding: 10px 15px;
-    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 25px;
-    font-weight: bold;
     text-align: center;
+    text-decoration: none;
 }
 
 .telegram-button:hover {
