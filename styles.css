@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -11,18 +12,23 @@ header {
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     height: 120px;
+}
+
+/* Menü-Button */
+.menu-container {
+    flex: 0 0 auto;
 }
 
 .menu-button {
     background-color: #e74c3c;
-    color: #ffffff;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     font-size: 1rem;
@@ -30,16 +36,18 @@ header {
     cursor: pointer;
 }
 
+/* Dropdown-Menü */
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 10px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: none;
+    z-index: 2000;
 }
 
 .dropdown-menu ul {
@@ -55,7 +63,6 @@ header {
 .dropdown-menu ul li a {
     text-decoration: none;
     color: #34495e;
-    font-weight: bold;
 }
 
 /* Logo */
@@ -79,24 +86,22 @@ header {
 .main-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2c3e50;
 }
 
 .intro-text {
     font-size: 1.2rem;
-    color: #34495e;
-    margin-bottom: 20px;
+    color: #555;
 }
 
 /* Buy Button */
 .buy-button {
     background-color: #d4af37;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 20px;
-    font-size: 1.2rem;
+    text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
-    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .buy-button:hover {
@@ -113,15 +118,9 @@ header {
 
 .copy-button {
     background-color: #27ae60;
-    color: #ffffff;
-    padding: 10px 20px;
+    color: white;
+    padding: 10px;
     border-radius: 4px;
-}
-
-.copy-feedback {
-    display: none;
-    font-size: 0.9rem;
-    color: #27ae60;
 }
 
 /* Telegram Button */
@@ -130,11 +129,8 @@ header {
     bottom: 20px;
     right: 20px;
     background-color: #0088cc;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
-
-.telegram-button:hover {
-    background-color: #006699;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
 }
