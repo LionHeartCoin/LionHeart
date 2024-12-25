@@ -27,20 +27,27 @@ header {
 }
 
 .menu-button {
-    background-color: #e74c3c;
+    background: linear-gradient(90deg, #e74c3c, #c0392b); /* Schöner Farbverlauf */
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 20px; /* Größere Abmessungen */
+    font-size: 1.2rem; /* Größere Schrift */
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px; /* Leicht abgerundete Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-button:hover {
-    background-color: #c0392b;
-    transform: scale(1.05);
+    background: linear-gradient(90deg, #c0392b, #a93226); /* Dunklerer Verlauf beim Hover */
+    transform: translateY(-2px); /* Leichte Hebung */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensiverer Schatten */
+}
+
+.menu-button:active {
+    transform: translateY(0); /* Kein Hebeeffekt beim Klicken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduzierter Schatten */
 }
 
 /* Dropdown-Menü */
@@ -50,12 +57,12 @@ header {
     left: 0; /* Bleibt linksbündig mit dem Button */
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
     padding: 0;
-    display: none; /* Standardmäßig unsichtbar */
+    display: none; /* Unsichtbar, bis es angezeigt wird */
     z-index: 1000;
-    width: 200px; /* Breite des Menüs */
+    width: 220px; /* Breitere Darstellung */
 }
 
 .dropdown-menu ul {
@@ -71,12 +78,12 @@ header {
 
 .dropdown-menu ul li a {
     display: block; /* Klickbarer Bereich für den ganzen Eintrag */
-    padding: 10px 15px;
+    padding: 12px 18px; /* Größere Abmessungen */
     text-decoration: none;
     color: #34495e;
     font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border-bottom: 1px solid #ddd; /* Trennlinie zwischen Einträgen */
 }
 
@@ -85,9 +92,10 @@ header {
 }
 
 .dropdown-menu ul li a:hover {
-    background-color: #f5f5f5;
-    color: #e74c3c;
-}/* Logo */
+    background-color: #f5f5f5; /* Dezentes Hover-Highlight */
+    color: #e74c3c; /* Farbe passend zum Button */
+}
+/* Logo */
 .header-logo .logo {
     max-width: 100px;
     height: auto;
