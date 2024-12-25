@@ -148,25 +148,21 @@ header {
 
 /* Widget-Bereich */
 .widget-container {
-    display: block;
-    width: 350px; /* Breite passend zum Widget */
-    margin: 20px auto; /* Zentriert */
-    padding: 10px; /* Innenabstand */
-    background-color: #f9f9f9; /* Leicht grauer Hintergrund */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    text-align: center; /* Zentriert das Widget */
+    margin: 20px auto; /* Abstand nach oben und unten, zentriert */
+    max-width: 400px; /* Optionale Begrenzung der Breite */
+    padding: 10px; /* Zusätzlicher Abstand */
+    background-color: #f9f9f9; /* Sanfter grauer Hintergrund */
     border-radius: 8px; /* Abgerundete Ecken */
-    text-align: center; /* Zentrierter Inhalt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
 }
 
-.widget-container .gfm-embed {
-    display: block;
-    margin: 0 auto; /* Zentriert das Widget innerhalb des Containers */
-}
-
-.widget-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Verstärkter Schatten beim Hover */
-    transform: translateY(-2px); /* Leichte Hebung beim Hover */
-    transition: all 0.3s ease-in-out; /* Glatter Übergang */
+.widget-container iframe {
+    width: 100%; /* Passt das iframe an die Breite des Containers an */
+    height: 300px; /* Definiert die Höhe des Widgets (anpassbar) */
+    border: none; /* Entfernt den Rahmen */
+    border-radius: 8px; /* Gleiche Ecken wie der Container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
 }
 
 /* Copy Contract Button */
