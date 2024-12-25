@@ -24,10 +24,12 @@ header {
 /* Header Logo (zentriert) */
 .header-logo {
     flex: 1;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute; /* Absolut positioniert */
+    left: 50%; /* Mittig ausgerichtet */
+    transform: translateX(-50%); /* Zentrierung */
 }
 
 .header-logo .logo {
@@ -38,6 +40,7 @@ header {
 /* Menü-Button */
 .menu-container {
     position: relative;
+    z-index: 10; /* Stellt sicher, dass es über dem Dropdown bleibt */
 }
 
 .menu-button {
@@ -116,7 +119,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 15px; /* Reduzierter Abstand nach rechts */
+    margin-right: 25px; /* Weiter nach links verschoben */
 }
 
 .twitter-button a {
