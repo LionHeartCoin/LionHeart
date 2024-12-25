@@ -34,6 +34,7 @@ header {
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .menu-button:hover {
@@ -77,18 +78,42 @@ header {
 
 /* Twitter Button */
 .twitter-button {
-    margin-right: 30px; /* Abstand nach links */
+    flex: 0 0 auto;
+    margin-right: 20px; /* Abstand nach links */
+}
+
+.twitter-button a {
+    display: inline-block;
+    width: 40px; /* Feste Breite des Buttons */
+    height: 40px; /* Feste Höhe des Buttons */
+    background-color: #1da1f2; /* Twitter-Blau */
+    border-radius: 50%; /* Kreisförmig */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.twitter-button a:hover {
+    background-color: #0d95e8; /* Dunkleres Blau beim Hover */
+    transform: scale(1.1); /* Leichte Vergrößerung */
 }
 
 .twitter-button img {
-    width: 30px;
-    height: 30px;
+    width: 20px; /* Symbolgröße */
+    height: 20px;
 }
 
 /* Hauptinhalt */
 .container {
-    padding: 140px 20px 40px;
-    text-align: center;
+    padding: 140px 20px 40px; /* Abstand vom Header */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto; /* Zentrierung */
+    text-align: center; /* Mittig ausgerichtet für bessere Lesbarkeit */
 }
 
 .main-title {
@@ -112,6 +137,8 @@ header {
     font-size: 1.2rem;
     margin-top: 20px;
     display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buy-button:hover {
@@ -119,11 +146,37 @@ header {
     transform: scale(1.05);
 }
 
-/* Copy Button */
+/* Widget */
+.widget-container {
+    display: block;
+    width: 350px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    height: auto;
+}
+
+.widget-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}
+
+.widget-container .gfm-embed {
+    display: block;
+    margin: auto;
+}
+
+/* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px;
+    bottom: 80px; /* Abstand über dem Telegram-Button */
     right: 20px;
+    text-align: center;
+    z-index: 1000;
 }
 
 .copy-button {
@@ -131,20 +184,25 @@ header {
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .copy-button:hover {
     background-color: #229954;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .copy-feedback {
     display: none;
+    color: #27ae60;
     margin-top: 5px;
     font-size: 0.9rem;
-    color: #27ae60;
+    font-weight: bold;
 }
 
 /* Telegram Button */
@@ -156,11 +214,15 @@ header {
     color: white;
     padding: 10px 15px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 50px;
     font-weight: bold;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .telegram-button:hover {
     background-color: #006699;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
