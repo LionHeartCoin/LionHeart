@@ -41,6 +41,7 @@ header {
 .menu-container {
     position: relative;
     z-index: 10; /* Stellt sicher, dass es über dem Dropdown bleibt */
+    margin-left: -20px; /* Weiter nach links verschoben */
 }
 
 .menu-button {
@@ -119,7 +120,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 25px; /* Weiter nach links verschoben */
+    margin-right: 20px; /* Weiter nach links verschoben */
 }
 
 .twitter-button a {
