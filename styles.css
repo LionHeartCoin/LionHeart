@@ -212,7 +212,7 @@ header {
 /* Copy Contract Button */
 .copy-container {
     position: fixed;
-    bottom: 80px; /* Über Telegram-Button */
+    bottom: 80px; /* Abstand über dem Telegram-Button */
     right: 20px; /* Abstand vom rechten Rand */
     text-align: center;
     z-index: 1000;
@@ -226,27 +226,26 @@ header {
     font-weight: bold;
     border-radius: 50px; /* Runde Form */
     text-align: center;
-    text-decoration: none;
-    display: flex; /* Flexbox für zentrierten Inhalt */
-    align-items: center; /* Text vertikal zentriert */
-    justify-content: center; /* Text horizontal zentriert */
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Zeigt Klickbarkeit an */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
     transition: all 0.3s ease-in-out;
 }
 
 .copy-button:hover {
     background-color: #229954; /* Dunkleres Grün beim Hover */
     transform: scale(1.05); /* Leichte Vergrößerung */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten beim Hover */
 }
 
 .copy-feedback {
     display: none; /* Standardmäßig versteckt */
     color: #27ae60;
-    margin-top: 5px;
+    margin-top: 10px; /* Abstand nach unten */
     font-size: 0.9rem;
     font-weight: bold;
+    position: relative; /* Position relativ zum Button */
+    top: -5px; /* Direkt über dem Button anzeigen */
+    text-align: center;
 }
 
 /* Telegram Button */
@@ -255,9 +254,9 @@ header {
     bottom: 20px; /* Abstand vom unteren Rand */
     right: 20px; /* Abstand vom rechten Rand */
     background-color: #0088cc; /* Telegram-Farbe */
-    color: white;
+    color: white; /* Weiße Schrift */
     padding: 12px 20px; /* Kompaktere Größe */
-    border-radius: 50px; /* Abgerundeter Button */
+    border-radius: 50px; /* Runde Form */
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -265,13 +264,23 @@ header {
     display: flex; /* Flexbox für zentrierten Inhalt */
     align-items: center; /* Text vertikal zentriert */
     justify-content: center; /* Text horizontal zentriert */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten */
+    cursor: pointer; /* Zeigt Klickbarkeit an */
     transition: all 0.3s ease-in-out;
 }
 
 .telegram-button:hover {
     background-color: #006699; /* Dunklere Farbe beim Hover */
     transform: scale(1.05); /* Leichte Vergrößerung */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten beim Hover */
+}
+
+.telegram-link {
+    color: white; /* Weiße Schrift */
+    text-decoration: none; /* Keine Unterstreichung */
+    width: 100%; /* Klickbarkeit auf den gesamten Button */
+    height: 100%;
+    display: flex; /* Flexbox für vollständige Klickbarkeit */
+    align-items: center; /* Vertikal zentriert */
+    justify-content: center; /* Horizontal zentriert */
 }
