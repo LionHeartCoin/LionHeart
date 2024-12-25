@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenomics - LionHeart Coin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav id="dropdown-menu" class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project-description.html">Project Description</a></li>
+                    <li><a href="tokenomics.html">Tokenomics</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-logo">
+            <img src="lionheart-logo.png" alt="LionHeart Logo" class="logo">
+        </div>
+        <div class="twitter-button">
+            <a href="https://twitter.com/lionheartcoin" target="_blank">
+                <img src="logo-black.png" alt="Twitter" class="twitter-icon">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <h1 class="main-title">Tokenomics</h1>
+        <p class="intro-text">
+            Discover the distribution and economic principles behind LionHeart Coin. Our transparent tokenomics ensure trust and growth for all stakeholders.
+        </p>
+
+        <!-- Tokenomics Diagram -->
+        <section class="diagram-section">
+            <h2>Token Distribution</h2>
+            <canvas id="tokenomics-chart" width="400" height="400"></canvas>
+        </section>
+
+        <!-- Details Section -->
+        <section class="details-section">
+            <h2>Detailed Breakdown</h2>
+            <table class="tokenomics-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Percentage</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Development</td>
+                        <td>20%</td>
+                        <td>Funds allocated for ongoing development and improvements.</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>15%</td>
+                        <td>Dedicated to spreading awareness and adoption.</td>
+                    </tr>
+                    <tr>
+                        <td>Liquidity</td>
+                        <td>30%</td>
+                        <td>Ensuring stable and smooth trading operations.</td>
+                    </tr>
+                    <tr>
+                        <td>Community Rewards</td>
+                        <td>25%</td>
+                        <td>For incentivizing early adopters and long-term supporters.</td>
+                    </tr>
+                    <tr>
+                        <td>Reserves</td>
+                        <td>10%</td>
+                        <td>For unforeseen expenses or strategic opportunities.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-buttons">
+            <a href="https://t.me/LionHeartCoin" class="cta-button" target="_blank">Join us on Telegram</a>
+            <a href="index.html" class="cta-button">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Tokenomics Diagram (Chart.js)
+        const ctx = document.getElementById('tokenomics-chart').getContext('2d');
+        const tokenomicsChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Development', 'Marketing', 'Liquidity', 'Community Rewards', 'Reserves'],
+                datasets: [{
+                    data: [20, 15, 30, 25, 10], // Percentage values
+                    backgroundColor: ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6'], // Colors
+                    borderColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
