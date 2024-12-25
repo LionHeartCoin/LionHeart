@@ -20,6 +20,19 @@ header {
     z-index: 1000;
     height: 120px;
 }
+/* Header Logo (zentriert) */
+.header-logo {
+    flex: 1;
+    text-align: center; /* Zentriert das Logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo .logo {
+    max-width: 120px;
+    height: auto;
+}
 
 /* Menü-Button */
 .menu-container {
@@ -101,32 +114,35 @@ header {
     height: auto;
 }
 
-/* Twitter Button */
+/* Twitter-Button */
 .twitter-button {
     flex: 0 0 auto;
-    margin-right: 20px; /* Abstand nach links */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .twitter-button a {
     display: inline-block;
     width: 40px; /* Feste Breite des Buttons */
     height: 40px; /* Feste Höhe des Buttons */
-    background-color: #1da1f2; /* Twitter-Blau */
-    border-radius: 50%; /* Kreisförmig */
+    background-color: white; /* Weißer Hintergrund */
+    border: 2px solid black; /* Schwarzer Rand */
+    border-radius: 50%; /* Kreisform */
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .twitter-button a:hover {
-    background-color: #0d95e8; /* Dunkleres Blau beim Hover */
-    transform: scale(1.1); /* Leichte Vergrößerung */
+    background-color: #f2f2f2; /* Leicht grauer Hintergrund beim Hover */
+    transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
 }
 
 .twitter-button img {
-    width: 20px; /* Symbolgröße */
+    width: 20px; /* Größe des Symbols */
     height: 20px;
 }
 
