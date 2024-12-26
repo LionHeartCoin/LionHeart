@@ -331,6 +331,8 @@ header {
     font-size: 1rem;
     color: #34495e;
     line-height: 1.8;
+    text-align: center;
+
 }
 
 .description-section ul {
